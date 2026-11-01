@@ -1,0 +1,2071 @@
+goroutine 1 [running]:
+runtime/pprof.writeGoroutineStacks({0x635df8, 0x2e43f0706010})
+	/usr/local/go/src/runtime/pprof/pprof.go:816 +0x6c
+runtime/pprof.writeGoroutine({0x635df8?, 0x2e43f0706010?}, 0x2e43f0605cc8?)
+	/usr/local/go/src/runtime/pprof/pprof.go:779 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x2e1117?, {0x635df8?, 0x2e43f0706010?}, 0x2e43000001b6?)
+	/usr/local/go/src/runtime/pprof/pprof.go:405 +0x144
+main.write({0x2e43f0716010?, 0xffffdf649f23?}, 0x2)
+	/app/main.go:60 +0x80
+main.main()
+	/app/main.go:48 +0x3f4
+
+goroutine 20 [sleep]:
+time.Sleep(0xbebc200)
+	/usr/local/go/src/runtime/time.go:368 +0x150
+main.leak()
+	/app/main.go:69 +0x44
+created by main.main in goroutine 1
+	/app/main.go:43 +0x3ac
+
+goroutine 21 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 6 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 8 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 36 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 9 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 11 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 23 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 25 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 38 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 27 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 40 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 29 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 42 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 31 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 44 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 33 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 46 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 51 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 48 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 53 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 66 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 55 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 68 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 57 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 70 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 98 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 115 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 72 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 117 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 74 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 119 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 76 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 121 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 78 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 123 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 80 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 125 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 100 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 130 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 102 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 132 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 129 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 103 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 104 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 106 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 147 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 108 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 149 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 110 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 151 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 112 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 153 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 162 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 155 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 164 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 158 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 165 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 167 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 160 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 169 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 178 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 171 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 180 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 183 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 176 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 133 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 135 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 194 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 137 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 196 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 139 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 198 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 141 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 200 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 144 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 201 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 203 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 210 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 205 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 212 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 207 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 214 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 209 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 216 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 227 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 218 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 229 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 220 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 231 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 222 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 233 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 224 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 235 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 242 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 237 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 244 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 239 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 246 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 240 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 258 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 185 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 260 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 188 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 261 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 190 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 248 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 263 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 250 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 265 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 252 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 267 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 269 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 254 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 271 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 256 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 273 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 274 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 292 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 275 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 277 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 294 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 296 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 279 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 298 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 281 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 300 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 283 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 302 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 285 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 304 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 287 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 306 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 289 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 308 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 310 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 312 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 323 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 314 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 325 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 316 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 327 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 318 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 329 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 320 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 333 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 321 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 338 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 340 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 342 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 344 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 335 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 346 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 192 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 337 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 354 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 371 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 356 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 373 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 358 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 375 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 360 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 377 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 362 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 379 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 364 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 381 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 366 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 383 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 368 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 385 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 386 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 403 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 388 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 405 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 390 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 408 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 391 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 393 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 395 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 410 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 412 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 397 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 414 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 399 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 416 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 401 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 418 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 420 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 435 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 422 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 437 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 348 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 424 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 350 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 426 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 352 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 450 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 428 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 452 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 430 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 454 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 432 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 456 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 466 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 458 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 468 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 460 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 439 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 470 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 441 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 472 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 443 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 445 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 474 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 447 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 476 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 449 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 478 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 483 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 480 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 485 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 498 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 487 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 500 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 489 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 502 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 491 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 493 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 504 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 495 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 506 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 497 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 508 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 515 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 510 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 517 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 512 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 519 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 462 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 530 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 532 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 464 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 534 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 546 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 536 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 538 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 548 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 541 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 549 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 551 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 543 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 553 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 545 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 555 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 563 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 557 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 565 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 559 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 568 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 560 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 578 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 570 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 580 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 572 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 582 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 574 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 584 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 586 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 576 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 588 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 594 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 596 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 590 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 598 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 592 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 600 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 602 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 610 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 604 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 614 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 605 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 606 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 608 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 616 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 626 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 618 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 628 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 630 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 620 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 632 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 622 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 634 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 624 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 521 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 636 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 523 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 638 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 525 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 640 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 527 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 642 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 529 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 644 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 646 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 659 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 648 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 661 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 650 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 663 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 665 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 652 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 667 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 654 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 669 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 656 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 671 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 674 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 673 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 676 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 691 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 693 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 678 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 695 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 697 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 680 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 699 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 701 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 683 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 702 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 704 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 685 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 706 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 687 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 708 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 689 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 710 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 723 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 712 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 725 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 714 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 727 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8
+
+goroutine 716 [chan send]:
+main.lookupPrice.func1()
+	/app/main.go:79 +0x48
+created by main.lookupPrice in goroutine 20
+	/app/main.go:77 +0xc8

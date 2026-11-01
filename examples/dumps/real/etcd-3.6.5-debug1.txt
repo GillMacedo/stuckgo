@@ -1,0 +1,183 @@
+goroutine profile: total 39
+3 @ 0x887a8 0x66704 0x3fca74 0x90884
+#	0x3fca73	google.golang.org/grpc/internal/grpcsync.(*CallbackSerializer).run+0xc3	google.golang.org/grpc@v1.71.1/internal/grpcsync/callback_serializer.go:88
+
+3 @ 0x887a8 0x66704 0x59dec4 0x90884
+#	0x59dec3	go.etcd.io/etcd/client/pkg/v3/fileutil.purgeFile.func1+0x2a3	go.etcd.io/etcd/client/pkg/v3@v3.6.5/fileutil/purge.go:97
+
+2 @ 0x887a8 0x66704 0x850594 0x90884
+#	0x850593	go.etcd.io/etcd/pkg/v3/schedule.(*fifo).run+0x1b3	go.etcd.io/etcd/pkg/v3@v3.6.5/schedule/schedule.go:173
+
+1 @ 0x252b4 0x8a8e0 0x9eae5c 0x90884
+#	0x8a8df		os/signal.signal_recv+0x2f	runtime/sigqueue.go:152
+#	0x9eae5b	os/signal.loop+0x1b		os/signal/signal_unix.go:23
+
+1 @ 0x47c4c 0x874e4 0x916274 0x9160a0 0x91378c 0x9276d4 0x2ffb14 0x9e8024 0x31c89c 0x2fc72c 0x90884
+#	0x916273	runtime/pprof.writeRuntimeProfile+0xb3					runtime/pprof/pprof.go:796
+#	0x91609f	runtime/pprof.writeGoroutine+0x4f					runtime/pprof/pprof.go:755
+#	0x91378b	runtime/pprof.(*Profile).WriteTo+0x14b					runtime/pprof/pprof.go:377
+#	0x9276d3	net/http/pprof.handler.ServeHTTP+0x443					net/http/pprof/pprof.go:272
+#	0x2ffb13	net/http.(*ServeMux).ServeHTTP+0x1b3					net/http/server.go:2822
+#	0x9e8023	go.etcd.io/etcd/server/v3/embed.(*accessController).ServeHTTP+0x403	go.etcd.io/etcd/server/v3/embed/serve.go:480
+#	0x31c89b	net/http.serverHandler.ServeHTTP+0xbb					net/http/server.go:3301
+#	0x2fc72b	net/http.(*conn).serve+0x52b						net/http/server.go:2102
+
+1 @ 0x887a8 0x200ac 0x1fc44 0x9e7698 0x9e5234 0x90884
+#	0x9e7697	go.etcd.io/etcd/server/v3/embed.(*serveCtx).registerGateway.func1+0x47	go.etcd.io/etcd/server/v3/embed/serve.go:363
+#	0x9e5233	go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler.func1+0x63	go.etcd.io/etcd/server/v3/embed/serve.go:88
+
+1 @ 0x887a8 0x200ac 0x1fc44 0x9eb2d8 0x90884
+#	0x9eb2d7	go.etcd.io/etcd/pkg/v3/osutil.HandleInterrupts.func1+0x37	go.etcd.io/etcd/pkg/v3@v3.6.5/osutil/interrupt_unix.go:56
+
+1 @ 0x887a8 0x4b828 0x87960 0xcb068 0xcc31c 0xcc30d 0x1e6848 0x1f52f4 0x1353e0 0xc22b0 0x4afa68 0x4afa3d 0x4b0138 0x4e6b58 0x90884
+#	0x8795f		internal/poll.runtime_pollWait+0x9f					runtime/netpoll.go:351
+#	0xcb067		internal/poll.(*pollDesc).wait+0x27					internal/poll/fd_poll_runtime.go:84
+#	0xcc31b		internal/poll.(*pollDesc).waitRead+0x1fb				internal/poll/fd_poll_runtime.go:89
+#	0xcc30c		internal/poll.(*FD).Read+0x1ec						internal/poll/fd_unix.go:165
+#	0x1e6847	net.(*netFD).Read+0x27							net/fd_posix.go:55
+#	0x1f52f3	net.(*conn).Read+0x33							net/net.go:194
+#	0x1353df	bufio.(*Reader).Read+0x1af						bufio/bufio.go:245
+#	0xc22af		io.ReadAtLeast+0x9f							io/io.go:335
+#	0x4afa67	io.ReadFull+0x57							io/io.go:354
+#	0x4afa3c	golang.org/x/net/http2.readFrameHeader+0x2c				golang.org/x/net@v0.38.0/http2/frame.go:242
+#	0x4b0137	golang.org/x/net/http2.(*Framer).ReadFrame+0x77				golang.org/x/net@v0.38.0/http2/frame.go:506
+#	0x4e6b57	google.golang.org/grpc/internal/transport.(*http2Client).reader+0x157	google.golang.org/grpc@v1.71.1/internal/transport/http2_client.go:1640
+
+1 @ 0x887a8 0x4b828 0x87960 0xcb068 0xcc31c 0xcc30d 0x1e6848 0x1f52f4 0x900238 0x9015a8 0x1353e0 0xc22b0 0x4afa68 0x4afa3d 0x4b0138 0x4ebb00 0x562b14 0x56241c 0x90884
+#	0x8795f		internal/poll.runtime_pollWait+0x9f						runtime/netpoll.go:351
+#	0xcb067		internal/poll.(*pollDesc).wait+0x27						internal/poll/fd_poll_runtime.go:84
+#	0xcc31b		internal/poll.(*pollDesc).waitRead+0x1fb					internal/poll/fd_poll_runtime.go:89
+#	0xcc30c		internal/poll.(*FD).Read+0x1ec							internal/poll/fd_unix.go:165
+#	0x1e6847	net.(*netFD).Read+0x27								net/fd_posix.go:55
+#	0x1f52f3	net.(*conn).Read+0x33								net/net.go:194
+#	0x900237	github.com/soheilhy/cmux.(*bufferedReader).Read+0x137				github.com/soheilhy/cmux@v0.1.5/buffer.go:53
+#	0x9015a7	github.com/soheilhy/cmux.(*MuxConn).Read+0x27					github.com/soheilhy/cmux@v0.1.5/cmux.go:297
+#	0x1353df	bufio.(*Reader).Read+0x1af							bufio/bufio.go:245
+#	0xc22af		io.ReadAtLeast+0x9f								io/io.go:335
+#	0x4afa67	io.ReadFull+0x57								io/io.go:354
+#	0x4afa3c	golang.org/x/net/http2.readFrameHeader+0x2c					golang.org/x/net@v0.38.0/http2/frame.go:242
+#	0x4b0137	golang.org/x/net/http2.(*Framer).ReadFrame+0x77					golang.org/x/net@v0.38.0/http2/frame.go:506
+#	0x4ebaff	google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams+0xbf	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:640
+#	0x562b13	google.golang.org/grpc.(*Server).serveStreams+0x2f3				google.golang.org/grpc@v1.71.1/server.go:1029
+#	0x56241b	google.golang.org/grpc.(*Server).handleRawConn.func1+0x5b			google.golang.org/grpc@v1.71.1/server.go:964
+
+1 @ 0x887a8 0x4b828 0x87960 0xcb068 0xcf93c 0xcf92d 0x1e8278 0x1fe454 0x1fd6ec 0x5a1fe8 0x5a2280 0x90098c 0x9e61b8 0x9e3b88 0x9e4c2c 0x90884
+#	0x8795f		internal/poll.runtime_pollWait+0x9f						runtime/netpoll.go:351
+#	0xcb067		internal/poll.(*pollDesc).wait+0x27						internal/poll/fd_poll_runtime.go:84
+#	0xcf93b		internal/poll.(*pollDesc).waitRead+0x24b					internal/poll/fd_poll_runtime.go:89
+#	0xcf92c		internal/poll.(*FD).Accept+0x23c						internal/poll/fd_unix.go:620
+#	0x1e8277	net.(*netFD).accept+0x27							net/fd_unix.go:172
+#	0x1fe453	net.(*TCPListener).accept+0x23							net/tcpsock_posix.go:159
+#	0x1fd6eb	net.(*TCPListener).Accept+0x2b							net/tcpsock.go:380
+#	0x5a1fe7	go.etcd.io/etcd/client/pkg/v3/transport.(*keepaliveListener).Accept+0x27	go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/keepalive_listener.go:53
+#	0x5a227f	go.etcd.io/etcd/client/pkg/v3/transport.(*limitListener).Accept+0x3f		go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/limit_listen.go:44
+#	0x90098b	github.com/soheilhy/cmux.(*cMux).Serve+0x7b					github.com/soheilhy/cmux@v0.1.5/cmux.go:170
+#	0x9e61b7	go.etcd.io/etcd/server/v3/embed.(*serveCtx).serve+0xc77				go.etcd.io/etcd/server/v3/embed/serve.go:290
+#	0x9e3b87	go.etcd.io/etcd/server/v3/embed.(*Etcd).serveClients.func1+0xc7			go.etcd.io/etcd/server/v3/embed/etcd.go:807
+#	0x9e4c2b	go.etcd.io/etcd/server/v3/embed.(*Etcd).startHandler.func1+0x5b			go.etcd.io/etcd/server/v3/embed/etcd.go:906
+
+1 @ 0x887a8 0x4b828 0x87960 0xcb068 0xcf93c 0xcf92d 0x1e8278 0x1fe454 0x1fd6ec 0x5a1fe8 0x5a812c 0x90098c 0x9e1d28 0x9e19d8 0x9e4c2c 0x90884
+#	0x8795f		internal/poll.runtime_pollWait+0x9f						runtime/netpoll.go:351
+#	0xcb067		internal/poll.(*pollDesc).wait+0x27						internal/poll/fd_poll_runtime.go:84
+#	0xcf93b		internal/poll.(*pollDesc).waitRead+0x24b					internal/poll/fd_poll_runtime.go:89
+#	0xcf92c		internal/poll.(*FD).Accept+0x23c						internal/poll/fd_unix.go:620
+#	0x1e8277	net.(*netFD).accept+0x27							net/fd_unix.go:172
+#	0x1fe453	net.(*TCPListener).accept+0x23							net/tcpsock_posix.go:159
+#	0x1fd6eb	net.(*TCPListener).Accept+0x2b							net/tcpsock.go:380
+#	0x5a1fe7	go.etcd.io/etcd/client/pkg/v3/transport.(*keepaliveListener).Accept+0x27	go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/keepalive_listener.go:53
+#	0x5a812b	go.etcd.io/etcd/client/pkg/v3/transport.(*rwTimeoutListener).Accept+0x2b	go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/timeout_listener.go:36
+#	0x90098b	github.com/soheilhy/cmux.(*cMux).Serve+0x7b					github.com/soheilhy/cmux@v0.1.5/cmux.go:170
+#	0x9e1d27	go.etcd.io/etcd/server/v3/embed.(*Etcd).servePeers.func1+0x107			go.etcd.io/etcd/server/v3/embed/etcd.go:615
+#	0x9e19d7	go.etcd.io/etcd/server/v3/embed.(*Etcd).servePeers.func3+0x107			go.etcd.io/etcd/server/v3/embed/etcd.go:644
+#	0x9e4c2b	go.etcd.io/etcd/server/v3/embed.(*Etcd).startHandler.func1+0x5b			go.etcd.io/etcd/server/v3/embed/etcd.go:906
+
+1 @ 0x887a8 0x66704 0x4d4514 0x4d4d70 0x4ddb28 0x90884
+#	0x4d4513	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x143	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:412
+#	0x4d4d6f	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x6f	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:575
+#	0x4ddb27	google.golang.org/grpc/internal/transport.NewHTTP2Client.func6+0xb7	google.golang.org/grpc@v1.71.1/internal/transport/http2_client.go:472
+
+1 @ 0x887a8 0x66704 0x4d4514 0x4d4d70 0x4e92b4 0x90884
+#	0x4d4513	google.golang.org/grpc/internal/transport.(*controlBuffer).get+0x143	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:412
+#	0x4d4d6f	google.golang.org/grpc/internal/transport.(*loopyWriter).run+0x6f	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:575
+#	0x4e92b3	google.golang.org/grpc/internal/transport.NewServerTransport.func2+0xc3	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:335
+
+1 @ 0x887a8 0x66704 0x4ef8b4 0x90884
+#	0x4ef8b3	google.golang.org/grpc/internal/transport.(*http2Server).keepalive+0x163	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:1180
+
+1 @ 0x887a8 0x66704 0x7765dc 0x90884
+#	0x7765db	go.etcd.io/etcd/server/v3/storage/backend.(*backend).run+0xcb	go.etcd.io/etcd/server/v3/storage/backend/backend.go:436
+
+1 @ 0x887a8 0x66704 0x7c72b0 0x90884
+#	0x7c72af	go.etcd.io/raft/v3.(*node).run+0x54f	go.etcd.io/raft/v3@v3.6.0/node.go:382
+
+1 @ 0x887a8 0x66704 0x7ec7cc 0x90884
+#	0x7ec7cb	go.etcd.io/etcd/server/v3/storage/wal.(*filePipeline).run+0xbb	go.etcd.io/etcd/server/v3/storage/wal/file_pipeline.go:98
+
+1 @ 0x887a8 0x66704 0x84e01c 0x90884
+#	0x84e01b	go.etcd.io/etcd/server/v3/lease.(*lessor).runLoop+0xcb	go.etcd.io/etcd/server/v3/lease/lessor.go:630
+
+1 @ 0x887a8 0x66704 0x8610a8 0x90884
+#	0x8610a7	go.etcd.io/etcd/server/v3/storage/mvcc.(*watchableStore).syncWatchersLoop+0x267	go.etcd.io/etcd/server/v3/storage/mvcc/watchable_store.go:250
+
+1 @ 0x887a8 0x66704 0x861344 0x90884
+#	0x861343	go.etcd.io/etcd/server/v3/storage/mvcc.(*watchableStore).syncVictimsLoop+0x173	go.etcd.io/etcd/server/v3/storage/mvcc/watchable_store.go:276
+
+1 @ 0x887a8 0x66704 0x8951a8 0x899890 0x8a806c 0x90884
+#	0x8951a7	go.etcd.io/etcd/server/v3/etcdserver.monitorFileDescriptor+0x237	go.etcd.io/etcd/server/v3/etcdserver/metrics.go:218
+#	0x89988f	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).Start.func3+0x2f	go.etcd.io/etcd/server/v3/etcdserver/server.go:547
+#	0x8a806b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1+0x5b	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542
+
+1 @ 0x887a8 0x66704 0x895c1c 0x90884
+#	0x895c1b	go.etcd.io/etcd/server/v3/etcdserver.(*raftNode).start.func1+0xfb	go.etcd.io/etcd/server/v3/etcdserver/raft.go:181
+
+1 @ 0x887a8 0x66704 0x89a6f0 0x8a806c 0x90884
+#	0x89a6ef	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).purgeFile+0x1df	go.etcd.io/etcd/server/v3/etcdserver/server.go:623
+#	0x8a806b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1+0x5b	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542
+
+1 @ 0x887a8 0x66704 0x89bb74 0x90884
+#	0x89bb73	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).run+0x4d3	go.etcd.io/etcd/server/v3/etcdserver/server.go:853
+
+1 @ 0x887a8 0x66704 0x8a69a8 0x8a806c 0x90884
+#	0x8a69a7	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).monitorClusterVersions+0xd7	go.etcd.io/etcd/server/v3/etcdserver/server.go:2331
+#	0x8a806b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1+0x5b		go.etcd.io/etcd/server/v3/etcdserver/server.go:2542
+
+1 @ 0x887a8 0x66704 0x8a6be8 0x8a806c 0x90884
+#	0x8a6be7	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).monitorStorageVersion+0xe7	go.etcd.io/etcd/server/v3/etcdserver/server.go:2354
+#	0x8a806b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1+0x5b		go.etcd.io/etcd/server/v3/etcdserver/server.go:2542
+
+1 @ 0x887a8 0x66704 0x8a785c 0x8a806c 0x90884
+#	0x8a785b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).monitorDowngrade+0xcb	go.etcd.io/etcd/server/v3/etcdserver/server.go:2460
+#	0x8a806b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1+0x5b		go.etcd.io/etcd/server/v3/etcdserver/server.go:2542
+
+1 @ 0x887a8 0x66704 0x8aea34 0x8a806c 0x90884
+#	0x8aea33	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).linearizableReadLoop+0xc3	go.etcd.io/etcd/server/v3/etcdserver/v3_server.go:809
+#	0x8a806b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1+0x5b		go.etcd.io/etcd/server/v3/etcdserver/server.go:2542
+
+1 @ 0x887a8 0x66704 0x901bf4 0x301570 0x90884
+#	0x901bf3	github.com/soheilhy/cmux.muxListener.Accept+0x63	github.com/soheilhy/cmux@v0.1.5/cmux.go:262
+#	0x30156f	net/http.(*Server).Serve+0x28f				net/http/server.go:3424
+
+1 @ 0x887a8 0x66704 0x901bf4 0x301570 0x9e7058 0x9e5234 0x90884
+#	0x901bf3	github.com/soheilhy/cmux.muxListener.Accept+0x63			github.com/soheilhy/cmux@v0.1.5/cmux.go:262
+#	0x30156f	net/http.(*Server).Serve+0x28f						net/http/server.go:3424
+#	0x9e7057	go.etcd.io/etcd/server/v3/embed.(*serveCtx).serve.func3+0x27		go.etcd.io/etcd/server/v3/embed/serve.go:208
+#	0x9e5233	go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler.func1+0x63	go.etcd.io/etcd/server/v3/embed/serve.go:88
+
+1 @ 0x887a8 0x66704 0x901bf4 0x56195c 0x9e7018 0x9e5234 0x90884
+#	0x901bf3	github.com/soheilhy/cmux.muxListener.Accept+0x63			github.com/soheilhy/cmux@v0.1.5/cmux.go:262
+#	0x56195b	google.golang.org/grpc.(*Server).Serve+0x42b				google.golang.org/grpc@v1.71.1/server.go:890
+#	0x9e7017	go.etcd.io/etcd/server/v3/embed.(*serveCtx).serve.func4+0x27		go.etcd.io/etcd/server/v3/embed/serve.go:214
+#	0x9e5233	go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler.func1+0x63	go.etcd.io/etcd/server/v3/embed/serve.go:88
+
+1 @ 0x887a8 0x66704 0x9a81d4 0x8a806c 0x90884
+#	0x9a81d3	go.etcd.io/etcd/server/v3/etcdserver/api/v3rpc.monitorLeader.func1+0xa3	go.etcd.io/etcd/server/v3/etcdserver/api/v3rpc/interceptor.go:324
+#	0x8a806b	go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1+0x5b	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542
+
+1 @ 0x887a8 0x66704 0xa2e918 0xa357c4 0xa366c4 0x52c74 0x90884
+#	0xa2e917	go.etcd.io/etcd/server/v3/etcdmain.startEtcdOrProxyV2+0x15e7	go.etcd.io/etcd/server/v3/etcdmain/etcd.go:195
+#	0xa357c3	go.etcd.io/etcd/server/v3/etcdmain.Main+0x113			go.etcd.io/etcd/server/v3/etcdmain/main.go:40
+#	0xa366c3	main.main+0x33							go.etcd.io/etcd/server/v3/main.go:31
+#	0x52c73		runtime.main+0x283						runtime/proc.go:283
+
+1 @ 0x90884
+

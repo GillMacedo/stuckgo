@@ -1,0 +1,45 @@
+goroutine 1 [running]:
+runtime/pprof.writeGoroutineStacks({0x390280, 0x4000114050})
+	/usr/local/go/src/runtime/pprof/pprof.go:743 +0x6c
+runtime/pprof.writeGoroutine({0x390280?, 0x4000114050?}, 0x2af520?)
+	/usr/local/go/src/runtime/pprof/pprof.go:732 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x308bbe?, {0x390280?, 0x4000114050?}, 0x40000001b6?)
+	/usr/local/go/src/runtime/pprof/pprof.go:369 +0x148
+main.write({0x400013a078?, 0xffffd4465f1d?}, 0x2)
+	/app/main.go:60 +0x90
+main.main()
+	/app/main.go:50 +0x468
+
+goroutine 19 [semacquire, 2 minutes]:
+sync.runtime_Semacquire(0x4000106540?)
+	/usr/local/go/src/runtime/sema.go:62 +0x2c
+sync.(*WaitGroup).Wait(0x40001220d0)
+	/usr/local/go/src/sync/waitgroup.go:116 +0x74
+main.waitgroup()
+	/app/main.go:142 +0x98
+created by main.main in goroutine 1
+	/app/main.go:43 +0x3ec
+
+goroutine 20 [chan receive, 2 minutes]:
+main.process(...)
+	/app/main.go:145
+main.waitgroup.func1()
+	/app/main.go:139 +0x5c
+created by main.waitgroup in goroutine 19
+	/app/main.go:137 +0x38
+
+goroutine 21 [chan receive, 2 minutes]:
+main.process(...)
+	/app/main.go:145
+main.waitgroup.func1()
+	/app/main.go:139 +0x5c
+created by main.waitgroup in goroutine 19
+	/app/main.go:137 +0x38
+
+goroutine 22 [chan receive, 2 minutes]:
+main.process(...)
+	/app/main.go:145
+main.waitgroup.func1()
+	/app/main.go:139 +0x5c
+created by main.waitgroup in goroutine 19
+	/app/main.go:137 +0x38

@@ -1,0 +1,40 @@
+[
+  {
+    "skills": ["reading-goroutine-dumps"],
+    "query": "Our Go service is hanging. Here's a goroutine dump. What's wrong?",
+    "files": ["examples/dumps/mutex-late.txt", "examples/programs/stuck/main.go"],
+    "expected_behavior": [
+      "Calls go_goroutine_review",
+      "Names store.Get as waiting and store.Refresh as the possible holder",
+      "Says the holder isn't proven, and reads the code to check"
+    ]
+  },
+  {
+    "skills": ["reading-goroutine-dumps"],
+    "query": "How do I get a goroutine dump from a stuck service in production?",
+    "expected_behavior": [
+      "Recommends /debug/pprof/goroutine?debug=2",
+      "Warns that kill -QUIT ends the process",
+      "Doesn't run anything against the service"
+    ]
+  },
+  {
+    "skills": ["reading-goroutine-dumps"],
+    "query": "I think we have a goroutine leak. Here are two dumps a minute apart.",
+    "files": ["examples/dumps/leak-early.txt", "examples/dumps/leak-late.txt"],
+    "expected_behavior": [
+      "Calls go_goroutine_compare",
+      "Reports the growing stack, and that the same goroutine IDs stayed in place",
+      "Points to lookupPrice as where the send blocks"
+    ]
+  },
+  {
+    "skills": ["reading-goroutine-dumps"],
+    "query": "Is anything stuck in this dump?",
+    "files": ["examples/dumps/healthy-early.txt"],
+    "expected_behavior": [
+      "Calls go_goroutine_review",
+      "Says nothing looks stuck, without inventing a problem"
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+goroutine 1 [running]:
+runtime/pprof.writeGoroutineStacks({0x1d70a0, 0x25a913040030})
+	/usr/local/go/src/runtime/pprof/pprof.go:816 +0x6c
+runtime/pprof.writeGoroutineLeak({0x1d70a0, 0x25a913040030}, 0x2)
+	/usr/local/go/src/runtime/pprof/pprof.go:803 +0xe0
+runtime/pprof.(*Profile).WriteTo(0xe14c7?, {0x1d70a0?, 0x25a913040030?}, 0x25a9130421e0?)
+	/usr/local/go/src/runtime/pprof/pprof.go:405 +0x144
+main.leakProfile()
+	/app/main.go:49 +0x90
+main.main()
+	/app/main.go:60 +0x13c
+
+goroutine 7 [chan send (leaked)]:
+main.stuck()
+	/app/main.go:54 +0x34
+created by main.leakProfile in goroutine 1
+	/app/main.go:42 +0x30
+
+goroutine 8 [chan send (leaked)]:
+main.stuck()
+	/app/main.go:54 +0x34
+created by main.leakProfile in goroutine 1
+	/app/main.go:42 +0x30
+
+goroutine 9 [chan send (leaked)]:
+main.stuck()
+	/app/main.go:54 +0x34
+created by main.leakProfile in goroutine 1
+	/app/main.go:42 +0x30
+
+goroutine 10 [chan send (leaked)]:
+main.stuck()
+	/app/main.go:54 +0x34
+created by main.leakProfile in goroutine 1
+	/app/main.go:42 +0x30
+
+goroutine 11 [chan send (leaked)]:
+main.stuck()
+	/app/main.go:54 +0x34
+created by main.leakProfile in goroutine 1
+	/app/main.go:42 +0x30

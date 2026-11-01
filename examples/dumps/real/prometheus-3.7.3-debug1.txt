@@ -1,0 +1,184 @@
+goroutine profile: total 33
+2 @ 0x8db70 0x22ba8 0x22744 0x64c07c 0x95d84
+#	0x64c07b	github.com/prometheus/prometheus/discovery.(*Manager).updater+0x25b	/app/discovery/manager.go:347
+
+2 @ 0x8db70 0x6badc 0x64c220 0x95d84
+#	0x64c21f	github.com/prometheus/prometheus/discovery.(*Manager).sender+0x9f	/app/discovery/manager.go:372
+
+1 @ 0x27e74 0x8fde0 0x32ecec 0x95d84
+#	0x8fddf		os/signal.signal_recv+0x2f	/usr/local/go/src/runtime/sigqueue.go:152
+#	0x32eceb	os/signal.loop+0x1b		/usr/local/go/src/os/signal/signal_unix.go:23
+
+1 @ 0x4d0ac 0x8c904 0x36507a4 0x36505d0 0x364dd44 0x3660f74 0x3661820 0x3693cf4 0x302cd8 0x2109bd8 0x302cd8 0x2108c9c 0x302cd8 0x21096d0 0x3693964 0x366937c 0x36667f8 0x3669878 0x304770 0x83d820 0x83c4fc 0x302cd8 0x3694aa8 0x302cd8 0x31fed0 0x3010c8 0x95d84
+#	0x36507a3	runtime/pprof.writeRuntimeProfile+0xb3									/usr/local/go/src/runtime/pprof/pprof.go:788
+#	0x36505cf	runtime/pprof.writeGoroutine+0x4f									/usr/local/go/src/runtime/pprof/pprof.go:747
+#	0x364dd43	runtime/pprof.(*Profile).WriteTo+0x143									/usr/local/go/src/runtime/pprof/pprof.go:371
+#	0x3660f73	net/http/pprof.handler.ServeHTTP+0x413									/usr/local/go/src/net/http/pprof/pprof.go:272
+#	0x366181f	net/http/pprof.Index+0xbf										/usr/local/go/src/net/http/pprof/pprof.go:389
+#	0x3693cf3	github.com/prometheus/prometheus/web.serveDebug+0x2e3							/app/web/web.go:592
+#	0x302cd7	net/http.HandlerFunc.ServeHTTP+0x37									/usr/local/go/src/net/http/server.go:2322
+#	0x2109bd7	github.com/prometheus/client_golang/prometheus/promhttp.InstrumentHandlerResponseSize.func1+0xa7	/go/pkg/mod/github.com/prometheus/client_golang@v1.23.2/prometheus/promhttp/instrument_server.go:296
+#	0x302cd7	net/http.HandlerFunc.ServeHTTP+0x37									/usr/local/go/src/net/http/server.go:2322
+#	0x2108c9b	github.com/prometheus/client_golang/prometheus/promhttp.InstrumentHandlerDuration.func2+0x8b		/go/pkg/mod/github.com/prometheus/client_golang@v1.23.2/prometheus/promhttp/instrument_server.go:109
+#	0x302cd7	net/http.HandlerFunc.ServeHTTP+0x37									/usr/local/go/src/net/http/server.go:2322
+#	0x21096cf	github.com/prometheus/client_golang/prometheus/promhttp.InstrumentHandlerCounter.func1+0x9f		/go/pkg/mod/github.com/prometheus/client_golang@v1.23.2/prometheus/promhttp/instrument_server.go:147
+#	0x3693963	github.com/prometheus/prometheus/web.New.setPathWithPrefix.func21.1+0xa3				/app/web/web.go:907
+#	0x366937b	github.com/prometheus/common/route.(*Router).handle.func1+0x17b						/go/pkg/mod/github.com/prometheus/common@v0.67.1/route/route.go:83
+#	0x36667f7	github.com/julienschmidt/httprouter.(*Router).ServeHTTP+0x6b7						/go/pkg/mod/github.com/julienschmidt/httprouter@v1.3.0/router.go:387
+#	0x3669877	github.com/prometheus/common/route.(*Router).ServeHTTP+0x27						/go/pkg/mod/github.com/prometheus/common@v0.67.1/route/route.go:126
+#	0x30476f	net/http.(*ServeMux).ServeHTTP+0x18f									/usr/local/go/src/net/http/server.go:2861
+#	0x83d81f	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.(*middleware).serveHTTP+0xedf		/go/pkg/mod/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.63.0/handler.go:180
+#	0x83c4fb	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp.NewMiddleware.func1.1+0x3b		/go/pkg/mod/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.63.0/handler.go:67
+#	0x302cd7	net/http.HandlerFunc.ServeHTTP+0x37									/usr/local/go/src/net/http/server.go:2322
+#	0x3694aa7	github.com/prometheus/prometheus/web.(*Handler).Run.withStackTracer.func9+0x67				/app/web/web.go:128
+#	0x302cd7	net/http.HandlerFunc.ServeHTTP+0x37									/usr/local/go/src/net/http/server.go:2322
+#	0x31fecf	net/http.serverHandler.ServeHTTP+0xaf									/usr/local/go/src/net/http/server.go:3340
+#	0x3010c7	net/http.(*conn).serve+0x527										/usr/local/go/src/net/http/server.go:2109
+
+1 @ 0x8db70 0x22ba8 0x22744 0x35ba0ac 0x36a3864 0x4ce944 0x95d84
+#	0x35ba0ab	github.com/prometheus/prometheus/tracing.(*Manager).Run+0xeb	/app/tracing/tracing.go:66
+#	0x36a3863	main.main.func19+0x33						/app/cmd/prometheus/main.go:1166
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33			/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x22ba8 0x22744 0x36a2f1c 0x4ce944 0x95d84
+#	0x36a2f1b	main.main.func26+0x54b				/app/cmd/prometheus/main.go:1332
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33	/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x22ba8 0x22744 0x36a3118 0x4ce944 0x95d84
+#	0x36a3117	main.main.func24+0x197				/app/cmd/prometheus/main.go:1279
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33	/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x22ba8 0x22744 0x36a3a88 0x36a3a35 0x4ce944 0x95d84
+#	0x36a3a87	github.com/prometheus/prometheus/rules.(*Manager).Run+0x87	/app/rules/manager.go:192
+#	0x36a3a34	main.main.func15+0x34						/app/cmd/prometheus/main.go:1129
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33			/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x22ba8 0x22744 0x4ce7f0 0x36a2018 0x36a200d 0x57da8 0x95d84
+#	0x4ce7ef	github.com/oklog/run.(*Group).Run+0x12f	/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:43
+#	0x36a2017	main.main.func34+0x8f97			/app/cmd/prometheus/main.go:1435
+#	0x36a200c	main.main+0x8f8c			/app/cmd/prometheus/main.go:1439
+#	0x57da7		runtime.main+0x277			/usr/local/go/src/runtime/proc.go:285
+
+1 @ 0x8db70 0x22ba8 0x22744 0x64ae64 0x36a3b54 0x4ce944 0x95d84
+#	0x64ae63	github.com/prometheus/prometheus/discovery.(*Manager).Run+0x73	/app/discovery/manager.go:195
+#	0x36a3b53	main.main.func13+0x23						/app/cmd/prometheus/main.go:1114
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33			/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x22ba8 0x22744 0x64ae64 0x36a3c64 0x4ce944 0x95d84
+#	0x64ae63	github.com/prometheus/prometheus/discovery.(*Manager).Run+0x73	/app/discovery/manager.go:195
+#	0x36a3c63	main.main.func11+0x23						/app/cmd/prometheus/main.go:1100
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33			/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x22ba8 0x22764 0x521c1c 0x95d84
+#	0x521c1b	k8s.io/klog.(*loggingT).flushDaemon+0x5b	/go/pkg/mod/k8s.io/klog@v1.0.0/klog.go:1010
+
+1 @ 0x8db70 0x50c50 0x8cd60 0x10cfd8 0x10e1f0 0x10e1e1 0x18fb18 0x19e484 0x2fc700 0x285110 0x285258 0x3011f4 0x95d84
+#	0x8cd5f		internal/poll.runtime_pollWait+0x9f		/usr/local/go/src/runtime/netpoll.go:351
+#	0x10cfd7	internal/poll.(*pollDesc).wait+0x27		/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0x10e1ef	internal/poll.(*pollDesc).waitRead+0x1df	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0x10e1e0	internal/poll.(*FD).Read+0x1d0			/usr/local/go/src/internal/poll/fd_unix.go:165
+#	0x18fb17	net.(*netFD).Read+0x27				/usr/local/go/src/net/fd_posix.go:68
+#	0x19e483	net.(*conn).Read+0x33				/usr/local/go/src/net/net.go:196
+#	0x2fc6ff	net/http.(*connReader).Read+0x22f		/usr/local/go/src/net/http/server.go:812
+#	0x28510f	bufio.(*Reader).fill+0xdf			/usr/local/go/src/bufio/bufio.go:113
+#	0x285257	bufio.(*Reader).Peek+0x57			/usr/local/go/src/bufio/bufio.go:152
+#	0x3011f3	net/http.(*conn).serve+0x653			/usr/local/go/src/net/http/server.go:2145
+
+1 @ 0x8db70 0x50c50 0x8cd60 0x10cfd8 0x10e1f0 0x10e1e1 0x18fb18 0x19e484 0x319948 0x285110 0x285258 0x31a570 0x95d84
+#	0x8cd5f		internal/poll.runtime_pollWait+0x9f		/usr/local/go/src/runtime/netpoll.go:351
+#	0x10cfd7	internal/poll.(*pollDesc).wait+0x27		/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0x10e1ef	internal/poll.(*pollDesc).waitRead+0x1df	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0x10e1e0	internal/poll.(*FD).Read+0x1d0			/usr/local/go/src/internal/poll/fd_unix.go:165
+#	0x18fb17	net.(*netFD).Read+0x27				/usr/local/go/src/net/fd_posix.go:68
+#	0x19e483	net.(*conn).Read+0x33				/usr/local/go/src/net/net.go:196
+#	0x319947	net/http.(*persistConn).Read+0x47		/usr/local/go/src/net/http/transport.go:2125
+#	0x28510f	bufio.(*Reader).fill+0xdf			/usr/local/go/src/bufio/bufio.go:113
+#	0x285257	bufio.(*Reader).Peek+0x57			/usr/local/go/src/bufio/bufio.go:152
+#	0x31a56f	net/http.(*persistConn).readLoop+0x10f		/usr/local/go/src/net/http/transport.go:2278
+
+1 @ 0x8db70 0x50c50 0x8cd60 0x10cfd8 0x1115bc 0x1115ad 0x191318 0x1a7204 0x1a653c 0x366b8c0 0x4ccb58 0x3060ac 0x518d44 0x5187b8 0x4d34cc 0x95d84
+#	0x8cd5f		internal/poll.runtime_pollWait+0x9f							/usr/local/go/src/runtime/netpoll.go:351
+#	0x10cfd7	internal/poll.(*pollDesc).wait+0x27							/usr/local/go/src/internal/poll/fd_poll_runtime.go:84
+#	0x1115bb	internal/poll.(*pollDesc).waitRead+0x21b						/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+#	0x1115ac	internal/poll.(*FD).Accept+0x20c							/usr/local/go/src/internal/poll/fd_unix.go:613
+#	0x191317	net.(*netFD).accept+0x27								/usr/local/go/src/net/fd_unix.go:161
+#	0x1a7203	net.(*TCPListener).accept+0x23								/usr/local/go/src/net/tcpsock_posix.go:159
+#	0x1a653b	net.(*TCPListener).Accept+0x2b								/usr/local/go/src/net/tcpsock.go:380
+#	0x366b8bf	github.com/prometheus/prometheus/util/netconnlimit.(*sharedLimitListener).Accept+0x6f	/app/util/netconnlimit/netconnlimit.go:73
+#	0x4ccb57	github.com/mwitkow/go-conntrack.(*connTrackListener).Accept+0x57			/go/pkg/mod/github.com/mwitkow/go-conntrack@v0.0.0-20190716064945-2f068394615f/listener_wrapper.go:100
+#	0x3060ab	net/http.(*Server).Serve+0x24b								/usr/local/go/src/net/http/server.go:3463
+#	0x518d43	github.com/prometheus/exporter-toolkit/web.Serve+0x573					/go/pkg/mod/github.com/prometheus/exporter-toolkit@v0.14.1/web/tls_config.go:350
+#	0x5187b7	github.com/prometheus/exporter-toolkit/web.ServeMultiple.func1+0x27			/go/pkg/mod/github.com/prometheus/exporter-toolkit@v0.14.1/web/tls_config.go:273
+#	0x4d34cb	golang.org/x/sync/errgroup.(*Group).Go.func1+0x4b					/go/pkg/mod/golang.org/x/sync@v0.17.0/errgroup/errgroup.go:93
+
+1 @ 0x8db70 0x6badc 0x31bc94 0x95d84
+#	0x31bc93	net/http.(*persistConn).writeLoop+0x93	/usr/local/go/src/net/http/transport.go:2600
+
+1 @ 0x8db70 0x6badc 0x32c4a98 0x95d84
+#	0x32c4a97	github.com/prometheus/prometheus/util/logging.(*Deduper).run+0xa7	/app/util/logging/dedupe.go:122
+
+1 @ 0x8db70 0x6badc 0x33aca70 0x36a3958 0x4ce944 0x95d84
+#	0x33aca6f	github.com/prometheus/prometheus/scrape.(*Manager).Run+0x9f	/app/scrape/manager.go:129
+#	0x36a3957	main.main.func17+0x47						/app/cmd/prometheus/main.go:1147
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33			/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x6badc 0x33acc4c 0x95d84
+#	0x33acc4b	github.com/prometheus/prometheus/scrape.(*Manager).reloader+0xeb	/app/scrape/manager.go:167
+
+1 @ 0x8db70 0x6badc 0x33b9760 0x95d84
+#	0x33b975f	github.com/prometheus/prometheus/scrape.(*scrapeLoop).run+0x2bf	/app/scrape/scrape.go:1384
+
+1 @ 0x8db70 0x6badc 0x34f0578 0x95d84
+#	0x34f0577	github.com/prometheus/prometheus/tsdb/wlog.(*WL).run+0x77	/app/tsdb/wlog/wlog.go:383
+
+1 @ 0x8db70 0x6badc 0x3590f54 0x95d84
+#	0x3590f53	github.com/prometheus/prometheus/storage/remote.(*WriteStorage).run+0xa3	/app/storage/remote/write.go:118
+
+1 @ 0x8db70 0x6badc 0x35e40b4 0x95d84
+#	0x35e40b3	github.com/prometheus/prometheus/tsdb.(*DB).run+0x103	/app/tsdb/db.go:1099
+
+1 @ 0x8db70 0x6badc 0x36948fc 0x36a2340 0x4ce944 0x95d84
+#	0x36948fb	github.com/prometheus/prometheus/web.(*Handler).Run+0x79b	/app/web/web.go:718
+#	0x36a233f	main.main.func30+0x2f						/app/cmd/prometheus/main.go:1402
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33			/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x6badc 0x36a328c 0x4ce944 0x95d84
+#	0x36a328b	main.main.func22+0xeb				/app/cmd/prometheus/main.go:1204
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33	/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x6badc 0x36a3db0 0x4ce944 0x95d84
+#	0x36a3daf	main.main.func9+0x6f				/app/cmd/prometheus/main.go:1078
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33	/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0x8db70 0x6badc 0x92fe5c 0x92fc5c 0x95d84
+#	0x92fe5b	github.com/prometheus/prometheus/notifier.(*Manager).sendLoop+0x6b	/app/notifier/manager.go:246
+#	0x92fc5b	github.com/prometheus/prometheus/notifier.(*Manager).Run.func2+0x4b	/app/notifier/manager.go:229
+
+1 @ 0x8db70 0x6badc 0x92ff38 0x92fd4c 0x95d84
+#	0x92ff37	github.com/prometheus/prometheus/notifier.(*Manager).targetUpdateLoop+0x77	/app/notifier/manager.go:270
+#	0x92fd4b	github.com/prometheus/prometheus/notifier.(*Manager).Run.func1+0x4b		/app/notifier/manager.go:224
+
+1 @ 0x8db70 0x6c884 0x6c865 0x8f318 0xa1588 0x4d3388 0x51875c 0x3694a18 0x95d84
+#	0x8f317		sync.runtime_SemacquireWaitGroup+0x37				/usr/local/go/src/runtime/sema.go:114
+#	0xa1587		sync.(*WaitGroup).Wait+0xa7					/usr/local/go/src/sync/waitgroup.go:206
+#	0x4d3387	golang.org/x/sync/errgroup.(*Group).Wait+0x27			/go/pkg/mod/golang.org/x/sync@v0.17.0/errgroup/errgroup.go:56
+#	0x51875b	github.com/prometheus/exporter-toolkit/web.ServeMultiple+0xeb	/go/pkg/mod/github.com/prometheus/exporter-toolkit@v0.14.1/web/tls_config.go:276
+#	0x3694a17	github.com/prometheus/prometheus/web.(*Handler).Run.func2+0x97	/app/web/web.go:715
+
+1 @ 0x8db70 0x6c884 0x6c865 0x8f318 0xa1588 0x92fbb0 0x36a2278 0x4ce944 0x95d84
+#	0x8f317		sync.runtime_SemacquireWaitGroup+0x37				/usr/local/go/src/runtime/sema.go:114
+#	0xa1587		sync.(*WaitGroup).Wait+0xa7					/usr/local/go/src/sync/waitgroup.go:206
+#	0x92fbaf	github.com/prometheus/prometheus/notifier.(*Manager).Run+0xdf	/app/notifier/manager.go:233
+#	0x36a2277	main.main.func32+0x47						/app/cmd/prometheus/main.go:1425
+#	0x4ce943	github.com/oklog/run.(*Group).Run.func1+0x33			/go/pkg/mod/github.com/oklog/run@v1.2.0/group.go:38
+
+1 @ 0xb2ae0 0xb0c60 0x10e214 0x10e201 0x10e0fd 0x18fb18 0x19e484 0x2fc138 0x95d84
+#	0xb2adf		syscall.Syscall+0x1f				/usr/local/go/src/syscall/syscall_linux.go:74
+#	0xb0c5f		syscall.read+0x3f				/usr/local/go/src/syscall/zsyscall_linux_arm64.go:736
+#	0x10e213	syscall.Read+0x203				/usr/local/go/src/syscall/syscall_unix.go:183
+#	0x10e200	internal/poll.ignoringEINTRIO+0x1f0		/usr/local/go/src/internal/poll/fd_unix.go:738
+#	0x10e0fc	internal/poll.(*FD).Read+0xec			/usr/local/go/src/internal/poll/fd_unix.go:161
+#	0x18fb17	net.(*netFD).Read+0x27				/usr/local/go/src/net/fd_posix.go:68
+#	0x19e483	net.(*conn).Read+0x33				/usr/local/go/src/net/net.go:196
+#	0x2fc137	net/http.(*connReader).backgroundRead+0x37	/usr/local/go/src/net/http/server.go:702
+

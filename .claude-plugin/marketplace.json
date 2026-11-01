@@ -1,0 +1,14 @@
+{
+  "name": "stuckgo-marketplace",
+  "description": "Marketplace for stuckgo, which finds what a stuck Go program is waiting on from a goroutine dump.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "stuckgo",
+      "source": "./plugin",
+      "description": "Finds what a stuck or leaking Go program is waiting on from a goroutine dump, with no connection to it."
+    }
+  ]
+}

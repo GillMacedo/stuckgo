@@ -1,0 +1,509 @@
+goroutine 1 [running]:
+runtime/pprof.writeGoroutineStacks({0x390280, 0x4000114038})
+	/usr/local/go/src/runtime/pprof/pprof.go:743 +0x6c
+runtime/pprof.writeGoroutine({0x390280?, 0x4000114038?}, 0x2af520?)
+	/usr/local/go/src/runtime/pprof/pprof.go:732 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x308bbe?, {0x390280?, 0x4000114038?}, 0x40000001b6?)
+	/usr/local/go/src/runtime/pprof/pprof.go:369 +0x148
+main.write({0x40001220e0?, 0xfffffa803f21?}, 0x2)
+	/app/main.go:60 +0x90
+main.main()
+	/app/main.go:50 +0x468
+
+goroutine 19 [chan receive, 2 minutes]:
+main.mutex()
+	/app/main.go:130 +0x170
+created by main.main in goroutine 1
+	/app/main.go:43 +0x3ec
+
+goroutine 20 [select, 2 minutes]:
+net.(*pipe).read(0x4000120080, {0x400015c000, 0x200, 0xa5754?})
+	/usr/local/go/src/net/pipe.go:159 +0xec
+net.(*pipe).Read(0x0?, {0x400015c000?, 0x0?, 0x0?})
+	/usr/local/go/src/net/pipe.go:142 +0x20
+io.ReadAll({0xffffbca15fd8, 0x4000120080})
+	/usr/local/go/src/io/io.go:712 +0x7c
+main.(*store).Refresh(0x0?, {0x394630?, 0x4000120080})
+	/app/main.go:118 +0xe4
+created by main.mutex in goroutine 19
+	/app/main.go:125 +0xf4
+
+goroutine 5 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 6 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 7 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 8 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 9 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 10 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 11 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 12 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 13 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 14 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 15 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 16 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 34 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 35 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 36 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 37 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 38 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 39 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 40 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 41 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 42 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 43 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 44 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 45 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 46 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 47 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 48 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 49 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 50 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 51 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 52 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 53 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 54 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 55 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 56 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 57 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 58 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 59 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 60 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110
+
+goroutine 61 [sync.Mutex.Lock, 2 minutes]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/sema.go:77 +0x28
+sync.(*Mutex).lockSlow(0x40001120b0)
+	/usr/local/go/src/sync/mutex.go:171 +0x174
+sync.(*Mutex).Lock(...)
+	/usr/local/go/src/sync/mutex.go:90
+main.(*store).Get(0x40001120b0, {0x307cba, 0x3})
+	/app/main.go:109 +0x88
+created by main.mutex in goroutine 19
+	/app/main.go:128 +0x110

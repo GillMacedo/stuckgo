@@ -1,0 +1,409 @@
+goroutine 167 [running]:
+runtime/pprof.writeGoroutineStacks({0xf0d960, 0x4000286000})
+	runtime/pprof/pprof.go:764 +0x6c
+runtime/pprof.writeGoroutine({0xf0d960?, 0x4000286000?}, 0x40001ed938?)
+	runtime/pprof/pprof.go:753 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x178fa20?, {0xf0d960?, 0x4000286000?}, 0xc?)
+	runtime/pprof/pprof.go:377 +0x14c
+net/http/pprof.handler.ServeHTTP({0xd51a61, 0x9}, {0xf16288, 0x4000286000}, 0x4000242000)
+	net/http/pprof/pprof.go:272 +0x444
+net/http.(*ServeMux).ServeHTTP(0xf16288?, {0xf16288, 0x4000286000}, 0x4000242000)
+	net/http/server.go:2822 +0x1b4
+go.etcd.io/etcd/server/v3/embed.(*accessController).ServeHTTP(0x400000c8d0, {0xf16288, 0x4000286000}, 0x4000242000)
+	go.etcd.io/etcd/server/v3/embed/serve.go:480 +0x404
+net/http.serverHandler.ServeHTTP({0x4000429350?}, {0xf16288?, 0x4000286000?}, 0x1?)
+	net/http/server.go:3301 +0xbc
+net/http.(*conn).serve(0x4000154090, {0xf1af18, 0x40009a0060})
+	net/http/server.go:2102 +0x52c
+created by net/http.(*Server).Serve in goroutine 92
+	net/http/server.go:3454 +0x3d8
+
+goroutine 1 [select, 3 minutes]:
+go.etcd.io/etcd/server/v3/etcdmain.startEtcdOrProxyV2({0x400003a240, 0x6, 0x6})
+	go.etcd.io/etcd/server/v3/etcdmain/etcd.go:195 +0x15e8
+go.etcd.io/etcd/server/v3/etcdmain.Main({0x400003a240, 0x6, 0x6})
+	go.etcd.io/etcd/server/v3/etcdmain/main.go:40 +0x114
+main.main()
+	go.etcd.io/etcd/server/v3/main.go:31 +0x34
+
+goroutine 141 [select, 3 minutes]:
+go.etcd.io/etcd/server/v3/storage/wal.(*filePipeline).run(0x40003ac940)
+	go.etcd.io/etcd/server/v3/storage/wal/file_pipeline.go:98 +0xbc
+created by go.etcd.io/etcd/server/v3/storage/wal.newFilePipeline in goroutine 1
+	go.etcd.io/etcd/server/v3/storage/wal/file_pipeline.go:55 +0x160
+
+goroutine 140 [select]:
+go.etcd.io/etcd/server/v3/storage/backend.(*backend).run(0x400012ee40)
+	go.etcd.io/etcd/server/v3/storage/backend/backend.go:436 +0xcc
+created by go.etcd.io/etcd/server/v3/storage/backend.newBackend in goroutine 139
+	go.etcd.io/etcd/server/v3/storage/backend/backend.go:245 +0x534
+
+goroutine 142 [select]:
+go.etcd.io/raft/v3.(*node).run(0x40003812c0)
+	go.etcd.io/raft/v3@v3.6.0/node.go:382 +0x550
+created by go.etcd.io/raft/v3.StartNode in goroutine 1
+	go.etcd.io/raft/v3@v3.6.0/node.go:273 +0x64
+
+goroutine 109 [select]:
+go.etcd.io/etcd/client/pkg/v3/fileutil.purgeFile.func1()
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/fileutil/purge.go:97 +0x2a4
+created by go.etcd.io/etcd/client/pkg/v3/fileutil.purgeFile in goroutine 177
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/fileutil/purge.go:55 +0x35c
+
+goroutine 144 [select]:
+go.etcd.io/etcd/server/v3/lease.(*lessor).runLoop(0x40000bed00)
+	go.etcd.io/etcd/server/v3/lease/lessor.go:630 +0xcc
+created by go.etcd.io/etcd/server/v3/lease.newLessor in goroutine 1
+	go.etcd.io/etcd/server/v3/lease/lessor.go:245 +0x280
+
+goroutine 161 [select, 3 minutes]:
+go.etcd.io/etcd/pkg/v3/schedule.(*fifo).run(0x40000f6f50)
+	go.etcd.io/etcd/pkg/v3@v3.6.5/schedule/schedule.go:173 +0x1b4
+created by go.etcd.io/etcd/pkg/v3/schedule.NewFIFOScheduler in goroutine 1
+	go.etcd.io/etcd/pkg/v3@v3.6.5/schedule/schedule.go:101 +0x178
+
+goroutine 108 [select]:
+go.etcd.io/etcd/client/pkg/v3/fileutil.purgeFile.func1()
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/fileutil/purge.go:97 +0x2a4
+created by go.etcd.io/etcd/client/pkg/v3/fileutil.purgeFile in goroutine 177
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/fileutil/purge.go:55 +0x35c
+
+goroutine 154 [select]:
+go.etcd.io/etcd/server/v3/storage/mvcc.(*watchableStore).syncWatchersLoop(0x40002eb4a0)
+	go.etcd.io/etcd/server/v3/storage/mvcc/watchable_store.go:250 +0x268
+created by go.etcd.io/etcd/server/v3/storage/mvcc.New in goroutine 1
+	go.etcd.io/etcd/server/v3/storage/mvcc/watchable_store.go:87 +0x80
+
+goroutine 155 [select, 3 minutes]:
+go.etcd.io/etcd/server/v3/storage/mvcc.(*watchableStore).syncVictimsLoop(0x40002eb4a0)
+	go.etcd.io/etcd/server/v3/storage/mvcc/watchable_store.go:276 +0x174
+created by go.etcd.io/etcd/server/v3/storage/mvcc.New in goroutine 1
+	go.etcd.io/etcd/server/v3/storage/mvcc/watchable_store.go:88 +0xc0
+
+goroutine 164 [chan receive, 3 minutes]:
+go.etcd.io/etcd/pkg/v3/osutil.HandleInterrupts.func1()
+	go.etcd.io/etcd/pkg/v3@v3.6.5/osutil/interrupt_unix.go:56 +0x38
+created by go.etcd.io/etcd/pkg/v3/osutil.HandleInterrupts in goroutine 1
+	go.etcd.io/etcd/pkg/v3@v3.6.5/osutil/interrupt_unix.go:55 +0xc0
+
+goroutine 46 [select, 3 minutes]:
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).run(0x40000fdc08)
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:853 +0x4d4
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).start in goroutine 1
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:608 +0xb20
+
+goroutine 84 [syscall, 3 minutes]:
+os/signal.signal_recv()
+	runtime/sigqueue.go:152 +0x30
+os/signal.loop()
+	os/signal/signal_unix.go:23 +0x1c
+created by os/signal.Notify.func1.1 in goroutine 1
+	os/signal/signal.go:152 +0x28
+
+goroutine 177 [select, 3 minutes]:
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).purgeFile(0x40000fdc08)
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:623 +0x1e0
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542 +0x5c
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach in goroutine 1
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2540 +0x10c
+
+goroutine 178 [select, 3 minutes]:
+go.etcd.io/etcd/server/v3/etcdserver.monitorFileDescriptor(0x400032c600, 0x40004077a0)
+	go.etcd.io/etcd/server/v3/etcdserver/metrics.go:218 +0x238
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).Start.func3()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:547 +0x30
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542 +0x5c
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach in goroutine 1
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2540 +0x10c
+
+goroutine 179 [select]:
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).monitorClusterVersions(0x40000fdc08)
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2331 +0xd8
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542 +0x5c
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach in goroutine 1
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2540 +0x10c
+
+goroutine 180 [select]:
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).monitorStorageVersion(0x40000fdc08)
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2354 +0xe8
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542 +0x5c
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach in goroutine 1
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2540 +0x10c
+
+goroutine 181 [select, 3 minutes]:
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).linearizableReadLoop(0x40000fdc08)
+	go.etcd.io/etcd/server/v3/etcdserver/v3_server.go:809 +0xc4
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542 +0x5c
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach in goroutine 1
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2540 +0x10c
+
+goroutine 158 [select]:
+go.etcd.io/etcd/server/v3/etcdserver.(*raftNode).start.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/raft.go:181 +0xfc
+created by go.etcd.io/etcd/server/v3/etcdserver.(*raftNode).start in goroutine 46
+	go.etcd.io/etcd/server/v3/etcdserver/raft.go:176 +0x7c
+
+goroutine 157 [select, 3 minutes]:
+go.etcd.io/etcd/pkg/v3/schedule.(*fifo).run(0x40001468c0)
+	go.etcd.io/etcd/pkg/v3@v3.6.5/schedule/schedule.go:173 +0x1b4
+created by go.etcd.io/etcd/pkg/v3/schedule.NewFIFOScheduler in goroutine 46
+	go.etcd.io/etcd/pkg/v3@v3.6.5/schedule/schedule.go:101 +0x178
+
+goroutine 184 [select]:
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).monitorDowngrade(0x40000fdc08)
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2460 +0xcc
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542 +0x5c
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach in goroutine 1
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2540 +0x10c
+
+goroutine 110 [select]:
+go.etcd.io/etcd/client/pkg/v3/fileutil.purgeFile.func1()
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/fileutil/purge.go:97 +0x2a4
+created by go.etcd.io/etcd/client/pkg/v3/fileutil.purgeFile in goroutine 177
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/fileutil/purge.go:55 +0x35c
+
+goroutine 185 [select, 3 minutes]:
+github.com/soheilhy/cmux.muxListener.Accept(...)
+	github.com/soheilhy/cmux@v0.1.5/cmux.go:262
+net/http.(*Server).Serve(0x4000400800, {0xf16438, 0x400039e5c0})
+	net/http/server.go:3424 +0x290
+created by go.etcd.io/etcd/server/v3/embed.(*Etcd).servePeers in goroutine 1
+	go.etcd.io/etcd/server/v3/embed/etcd.go:609 +0x268
+
+goroutine 186 [IO wait, 3 minutes]:
+internal/poll.runtime_pollWait(0xffff3d3b66e0, 0x72)
+	runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x4000194c00?, 0x2717c?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0x4000194c00)
+	internal/poll/fd_unix.go:620 +0x24c
+net.(*netFD).accept(0x4000194c00)
+	net/fd_unix.go:172 +0x28
+net.(*TCPListener).accept(0x40003ac540)
+	net/tcpsock_posix.go:159 +0x24
+net.(*TCPListener).Accept(0x40003ac540)
+	net/tcpsock.go:380 +0x2c
+go.etcd.io/etcd/client/pkg/v3/transport.(*keepaliveListener).Accept(0x40000d1da8?)
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/keepalive_listener.go:53 +0x28
+go.etcd.io/etcd/client/pkg/v3/transport.(*rwTimeoutListener).Accept(0x400039e000)
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/timeout_listener.go:36 +0x2c
+github.com/soheilhy/cmux.(*cMux).Serve(0x4000492d20)
+	github.com/soheilhy/cmux@v0.1.5/cmux.go:170 +0x7c
+go.etcd.io/etcd/server/v3/embed.(*Etcd).servePeers.func1()
+	go.etcd.io/etcd/server/v3/embed/etcd.go:615 +0x108
+go.etcd.io/etcd/server/v3/embed.(*Etcd).servePeers.func3()
+	go.etcd.io/etcd/server/v3/embed/etcd.go:644 +0x108
+go.etcd.io/etcd/server/v3/embed.(*Etcd).startHandler.func1()
+	go.etcd.io/etcd/server/v3/embed/etcd.go:906 +0x5c
+created by go.etcd.io/etcd/server/v3/embed.(*Etcd).startHandler in goroutine 1
+	go.etcd.io/etcd/server/v3/embed/etcd.go:904 +0x80
+
+goroutine 190 [IO wait]:
+internal/poll.runtime_pollWait(0xffff3d3b65c8, 0x72)
+	runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x400032c080?, 0x0?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0x400032c080)
+	internal/poll/fd_unix.go:620 +0x24c
+net.(*netFD).accept(0x400032c080)
+	net/fd_unix.go:172 +0x28
+net.(*TCPListener).accept(0x40003ac6c0)
+	net/tcpsock_posix.go:159 +0x24
+net.(*TCPListener).Accept(0x40003ac6c0)
+	net/tcpsock.go:380 +0x2c
+go.etcd.io/etcd/client/pkg/v3/transport.(*keepaliveListener).Accept(0x40003c75c8?)
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/keepalive_listener.go:53 +0x28
+go.etcd.io/etcd/client/pkg/v3/transport.(*limitListener).Accept(0x40003a2030)
+	go.etcd.io/etcd/client/pkg/v3@v3.6.5/transport/limit_listen.go:44 +0x40
+github.com/soheilhy/cmux.(*cMux).Serve(0x40000bc410)
+	github.com/soheilhy/cmux@v0.1.5/cmux.go:170 +0x7c
+go.etcd.io/etcd/server/v3/embed.(*serveCtx).serve(0x4000582f00, 0x40000fdc08, 0x4000383190, {0xf0b720, 0x400051c6c0}, 0x40000c6370, 0x40000da1c0, 0x0, {0x400039eac0, 0x2, ...})
+	go.etcd.io/etcd/server/v3/embed/serve.go:290 +0xc78
+go.etcd.io/etcd/server/v3/embed.(*Etcd).serveClients.func1()
+	go.etcd.io/etcd/server/v3/embed/etcd.go:807 +0xc8
+go.etcd.io/etcd/server/v3/embed.(*Etcd).startHandler.func1()
+	go.etcd.io/etcd/server/v3/embed/etcd.go:906 +0x5c
+created by go.etcd.io/etcd/server/v3/embed.(*Etcd).startHandler in goroutine 1
+	go.etcd.io/etcd/server/v3/embed/etcd.go:904 +0x80
+
+goroutine 85 [select, 3 minutes]:
+google.golang.org/grpc/internal/grpcsync.(*CallbackSerializer).run(0x4000334750, {0xf1af50, 0x40000bc550})
+	google.golang.org/grpc@v1.71.1/internal/grpcsync/callback_serializer.go:88 +0xc4
+created by google.golang.org/grpc/internal/grpcsync.NewCallbackSerializer in goroutine 190
+	google.golang.org/grpc@v1.71.1/internal/grpcsync/callback_serializer.go:52 +0x118
+
+goroutine 86 [select, 3 minutes]:
+google.golang.org/grpc/internal/grpcsync.(*CallbackSerializer).run(0x4000334780, {0xf1af50, 0x40000bc5a0})
+	google.golang.org/grpc@v1.71.1/internal/grpcsync/callback_serializer.go:88 +0xc4
+created by google.golang.org/grpc/internal/grpcsync.NewCallbackSerializer in goroutine 190
+	google.golang.org/grpc@v1.71.1/internal/grpcsync/callback_serializer.go:52 +0x118
+
+goroutine 87 [select, 3 minutes]:
+google.golang.org/grpc/internal/grpcsync.(*CallbackSerializer).run(0x40003348f0, {0xf1af50, 0x40000bc5f0})
+	google.golang.org/grpc@v1.71.1/internal/grpcsync/callback_serializer.go:88 +0xc4
+created by google.golang.org/grpc/internal/grpcsync.NewCallbackSerializer in goroutine 190
+	google.golang.org/grpc@v1.71.1/internal/grpcsync/callback_serializer.go:52 +0x118
+
+goroutine 89 [chan receive, 3 minutes]:
+go.etcd.io/etcd/server/v3/embed.(*serveCtx).registerGateway.func1()
+	go.etcd.io/etcd/server/v3/embed/serve.go:363 +0x48
+go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler.func1()
+	go.etcd.io/etcd/server/v3/embed/serve.go:88 +0x64
+created by go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler in goroutine 190
+	go.etcd.io/etcd/server/v3/embed/serve.go:86 +0x94
+
+goroutine 91 [select]:
+go.etcd.io/etcd/server/v3/etcdserver/api/v3rpc.monitorLeader.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/api/v3rpc/interceptor.go:324 +0xa4
+go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach.func1()
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2542 +0x5c
+created by go.etcd.io/etcd/server/v3/etcdserver.(*EtcdServer).GoAttach in goroutine 190
+	go.etcd.io/etcd/server/v3/etcdserver/server.go:2540 +0x10c
+
+goroutine 194 [IO wait, 3 minutes]:
+internal/poll.runtime_pollWait(0xffff3d3b64b0, 0x72)
+	runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x4000152180?, 0x40004ce000?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x4000152180, {0x40004ce000, 0x8000, 0x8000})
+	internal/poll/fd_unix.go:165 +0x1fc
+net.(*netFD).Read(0x4000152180, {0x40004ce000?, 0x40005bbc48?, 0x2717c?})
+	net/fd_posix.go:55 +0x28
+net.(*conn).Read(0x400042a000, {0x40004ce000?, 0x500000000?, 0xffff3d102da8?})
+	net/net.go:194 +0x34
+bufio.(*Reader).Read(0x4000426060, {0x40004c2040, 0x9, 0x40009a0090?})
+	bufio/bufio.go:245 +0x1b0
+io.ReadAtLeast({0xf0cdc0, 0x4000426060}, {0x40004c2040, 0x9, 0x9}, 0x9)
+	io/io.go:335 +0xa0
+io.ReadFull(...)
+	io/io.go:354
+golang.org/x/net/http2.readFrameHeader({0x40004c2040, 0x9, 0x40005bbe38?}, {0xf0cdc0?, 0x4000426060?})
+	golang.org/x/net@v0.38.0/http2/frame.go:242 +0x58
+golang.org/x/net/http2.(*Framer).ReadFrame(0x40004c2000)
+	golang.org/x/net@v0.38.0/http2/frame.go:506 +0x78
+google.golang.org/grpc/internal/transport.(*http2Client).reader(0x4000148008, 0x400031c000)
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_client.go:1640 +0x158
+created by google.golang.org/grpc/internal/transport.NewHTTP2Client in goroutine 88
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_client.go:414 +0x16a8
+
+goroutine 92 [select]:
+github.com/soheilhy/cmux.muxListener.Accept(...)
+	github.com/soheilhy/cmux@v0.1.5/cmux.go:262
+net/http.(*Server).Serve(0x4000216500, {0xf16438, 0x400067b020})
+	net/http/server.go:3424 +0x290
+go.etcd.io/etcd/server/v3/embed.(*serveCtx).serve.func3()
+	go.etcd.io/etcd/server/v3/embed/serve.go:208 +0x28
+go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler.func1()
+	go.etcd.io/etcd/server/v3/embed/serve.go:88 +0x64
+created by go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler in goroutine 190
+	go.etcd.io/etcd/server/v3/embed/serve.go:86 +0x94
+
+goroutine 93 [select, 3 minutes]:
+github.com/soheilhy/cmux.muxListener.Accept(...)
+	github.com/soheilhy/cmux@v0.1.5/cmux.go:262
+google.golang.org/grpc.(*Server).Serve(0x400016c400, {0xf16438, 0x400067b080})
+	google.golang.org/grpc@v1.71.1/server.go:890 +0x42c
+go.etcd.io/etcd/server/v3/embed.(*serveCtx).serve.func4()
+	go.etcd.io/etcd/server/v3/embed/serve.go:214 +0x28
+go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler.func1()
+	go.etcd.io/etcd/server/v3/embed/serve.go:88 +0x64
+created by go.etcd.io/etcd/server/v3/embed.(*serveCtx).startHandler in goroutine 190
+	go.etcd.io/etcd/server/v3/embed/serve.go:86 +0x94
+
+goroutine 225 [select, 3 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0x40004ec000, 0x1)
+	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:412 +0x144
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0x400032c500)
+	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:575 +0x70
+google.golang.org/grpc/internal/transport.NewHTTP2Client.func6()
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_client.go:472 +0xb8
+created by google.golang.org/grpc/internal/transport.NewHTTP2Client in goroutine 88
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_client.go:470 +0x1b34
+
+goroutine 192 [select, 3 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0x40003ad8c0, 0x1)
+	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:412 +0x144
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0x40000ca200)
+	google.golang.org/grpc@v1.71.1/internal/transport/controlbuf.go:575 +0x70
+google.golang.org/grpc/internal/transport.NewServerTransport.func2()
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:335 +0xc4
+created by google.golang.org/grpc/internal/transport.NewServerTransport in goroutine 191
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:333 +0x1358
+
+goroutine 209 [select, 3 minutes]:
+google.golang.org/grpc/internal/transport.(*http2Server).keepalive(0x4000020680)
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:1180 +0x164
+created by google.golang.org/grpc/internal/transport.NewServerTransport in goroutine 191
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:356 +0x1398
+
+goroutine 210 [IO wait, 3 minutes]:
+internal/poll.runtime_pollWait(0xffff3d3b6398, 0x72)
+	runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x4000208800?, 0x4000a10000?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x4000208800, {0x4000a10000, 0x8000, 0x8000})
+	internal/poll/fd_unix.go:165 +0x1fc
+net.(*netFD).Read(0x4000208800, {0x4000a10000?, 0x0?, 0x13d1bc78?})
+	net/fd_posix.go:55 +0x28
+net.(*conn).Read(0x40001f2220, {0x4000a10000?, 0x4000a07bd8?, 0x1c52a8?})
+	net/net.go:194 +0x34
+github.com/soheilhy/cmux.(*bufferedReader).Read(0x4000320010, {0x4000a10000, 0x4000a07bb8?, 0x8000})
+	github.com/soheilhy/cmux@v0.1.5/buffer.go:53 +0x138
+github.com/soheilhy/cmux.(*MuxConn).Read(0x4000320000?, {0x4000a10000?, 0x500000000?, 0xffff3d102da8?})
+	github.com/soheilhy/cmux@v0.1.5/cmux.go:297 +0x28
+bufio.(*Reader).Read(0x400002e060, {0x400040e900, 0x9, 0x40005815f0?})
+	bufio/bufio.go:245 +0x1b0
+io.ReadAtLeast({0xf0cdc0, 0x400002e060}, {0x400040e900, 0x9, 0x9}, 0x9)
+	io/io.go:335 +0xa0
+io.ReadFull(...)
+	io/io.go:354
+golang.org/x/net/http2.readFrameHeader({0x400040e900, 0x9, 0x40009a0150?}, {0xf0cdc0?, 0x400002e060?})
+	golang.org/x/net@v0.38.0/http2/frame.go:242 +0x58
+golang.org/x/net/http2.(*Framer).ReadFrame(0x400040e8c0)
+	golang.org/x/net@v0.38.0/http2/frame.go:506 +0x78
+google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams(0x4000020680, {0xf1af18, 0x40005816b0}, 0x40005816e0)
+	google.golang.org/grpc@v1.71.1/internal/transport/http2_server.go:640 +0xc0
+google.golang.org/grpc.(*Server).serveStreams(0x400016c400, {0xf1ac58?, 0x17e13c0?}, {0xf1b7b0, 0x4000020680}, {0xf23850?, 0x4000320000?})
+	google.golang.org/grpc@v1.71.1/server.go:1029 +0x2f4
+google.golang.org/grpc.(*Server).handleRawConn.func1()
+	google.golang.org/grpc@v1.71.1/server.go:964 +0x5c
+created by google.golang.org/grpc.(*Server).handleRawConn in goroutine 191
+	google.golang.org/grpc@v1.71.1/server.go:963 +0x1d4
+
+goroutine 168 [runnable]:
+syscall.Syscall(0x3f, 0xd, 0x4000429361, 0x1)
+	syscall/syscall_linux.go:73 +0x20
+syscall.read(0x4000234300?, {0x4000429361?, 0x40000a0000?, 0x4000687e00?})
+	syscall/zsyscall_linux_arm64.go:736 +0x40
+syscall.Read(...)
+	syscall/syscall_unix.go:183
+internal/poll.ignoringEINTRIO(...)
+	internal/poll/fd_unix.go:745
+internal/poll.(*FD).Read(0x4000234300, {0x4000429361, 0x1, 0x1})
+	internal/poll/fd_unix.go:161 +0x220
+net.(*netFD).Read(0x4000234300, {0x4000429361?, 0x178ade0?, 0xcb7640?})
+	net/fd_posix.go:55 +0x28
+net.(*conn).Read(0x40000761d0, {0x4000429361?, 0x2?, 0x40001f2210?})
+	net/net.go:194 +0x34
+github.com/soheilhy/cmux.(*bufferedReader).Read(0x40002f36d0, {0x4000429361, 0x0?, 0x1})
+	github.com/soheilhy/cmux@v0.1.5/buffer.go:53 +0x138
+github.com/soheilhy/cmux.(*MuxConn).Read(0x0?, {0x4000429361?, 0x0?, 0x4000240750?})
+	github.com/soheilhy/cmux@v0.1.5/cmux.go:297 +0x28
+net/http.(*connReader).backgroundRead(0x4000429350)
+	net/http/server.go:690 +0x40
+created by net/http.(*connReader).startBackgroundRead in goroutine 167
+	net/http/server.go:686 +0xc4

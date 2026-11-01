@@ -1,0 +1,177 @@
+SIGQUIT: quit
+PC=0x1cc20 m=0 sigcode=0
+
+goroutine 0 gp=0x1eb8c0 m=0 mp=0x1ec0c0 [idle]:
+internal/runtime/syscall/linux.Syscall6(0x16, 0x4, 0xffffe2b94d88, 0x80, 0x36ee7f, 0x0, 0x0)
+	/usr/local/go/src/internal/runtime/syscall/linux/asm_linux_arm64.s:17 +0x20 fp=0xffffe2b94cb0 sp=0xffffe2b94cb0 pc=0x1cc20
+internal/runtime/syscall/linux.EpollWait(0x0?, {0xffffe2b94d88?, 0x0?, 0x0?}, 0x0?, 0x0?)
+	/usr/local/go/src/internal/runtime/syscall/linux/syscall_linux.go:32 +0x50 fp=0xffffe2b94d20 sp=0xffffe2b94cb0 pc=0x1ca50
+runtime.netpoll(0x34630b82c47)
+	/usr/local/go/src/runtime/netpoll_epoll.go:133 +0xfc fp=0xffffe2b955b0 sp=0xffffe2b94d20 pc=0x507ac
+runtime.findRunnable()
+	/usr/local/go/src/runtime/proc.go:3769 +0x9c8 fp=0xffffe2b95780 sp=0xffffe2b955b0 pc=0x5c668
+runtime.schedule()
+	/usr/local/go/src/runtime/proc.go:4179 +0x90 fp=0xffffe2b957c0 sp=0xffffe2b95780 pc=0x5df20
+runtime.park_m(0x4873e2e99a40)
+	/usr/local/go/src/runtime/proc.go:4319 +0x23c fp=0xffffe2b95820 sp=0xffffe2b957c0 pc=0x5e39c
+runtime.mcall()
+	/usr/local/go/src/runtime/asm_arm64.s:319 +0x54 fp=0xffffe2b95830 sp=0xffffe2b95820 pc=0x8bfc4
+
+goroutine 1 gp=0x4873e2e981e0 m=nil [sleep]:
+runtime.gopark(0x546b395c5d3?, 0x5fb78?, 0x48?, 0xe?, 0xdbd40?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2f10df0 sp=0x4873e2f10dd0 pc=0x88148
+time.Sleep(0x34630b8a000)
+	/usr/local/go/src/runtime/time.go:368 +0x150 fp=0x4873e2f10e50 sp=0x4873e2f10df0 pc=0x8af90
+main.main()
+	/app/main.go:72 +0x1bc fp=0x4873e2f10ea0 sp=0x4873e2f10e50 pc=0xdbdac
+runtime.main()
+	/usr/local/go/src/runtime/proc.go:302 +0x380 fp=0x4873e2f10fd0 sp=0x4873e2f10ea0 pc=0x56320
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2f10fd0 sp=0x4873e2f10fd0 pc=0x8df64
+
+goroutine 2 gp=0x4873e2e98780 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eeaf90 sp=0x4873e2eeaf70 pc=0x88148
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.forcegchelper()
+	/usr/local/go/src/runtime/proc.go:387 +0xb4 fp=0x4873e2eeafd0 sp=0x4873e2eeaf90 pc=0x56604
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eeafd0 sp=0x4873e2eeafd0 pc=0x8df64
+created by runtime.init.7 in goroutine 1
+	/usr/local/go/src/runtime/proc.go:375 +0x24
+
+goroutine 3 gp=0x4873e2e98d20 m=nil [GC sweep wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eeb770 sp=0x4873e2eeb750 pc=0x88148
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.bgsweep(0x4873e2f0a000)
+	/usr/local/go/src/runtime/mgcsweep.go:279 +0x9c fp=0x4873e2eeb7b0 sp=0x4873e2eeb770 pc=0x40d4c
+runtime.gcenable.gowrap1()
+	/usr/local/go/src/runtime/mgc.go:214 +0x20 fp=0x4873e2eeb7d0 sp=0x4873e2eeb7b0 pc=0x80490
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eeb7d0 sp=0x4873e2eeb7d0 pc=0x8df64
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:214 +0x6c
+
+goroutine 4 gp=0x4873e2e98f00 m=nil [GC scavenge wait]:
+runtime.gopark(0x4873e2f0a000?, 0xe9f48?, 0x1?, 0x0?, 0x4873e2e98f00?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eebf60 sp=0x4873e2eebf40 pc=0x88148
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.(*scavengerState).park(0x1eb5c0)
+	/usr/local/go/src/runtime/mgcscavenge.go:425 +0x5c fp=0x4873e2eebf90 sp=0x4873e2eebf60 pc=0x3e9bc
+runtime.bgscavenge(0x4873e2f0a000)
+	/usr/local/go/src/runtime/mgcscavenge.go:653 +0x44 fp=0x4873e2eebfb0 sp=0x4873e2eebf90 pc=0x3eec4
+runtime.gcenable.gowrap2()
+	/usr/local/go/src/runtime/mgc.go:215 +0x20 fp=0x4873e2eebfd0 sp=0x4873e2eebfb0 pc=0x80450
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eebfd0 sp=0x4873e2eebfd0 pc=0x8df64
+created by runtime.gcenable in goroutine 1
+	/usr/local/go/src/runtime/mgc.go:215 +0xac
+
+goroutine 5 gp=0x4873e2e994a0 m=nil [GOMAXPROCS updater (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eea770 sp=0x4873e2eea750 pc=0x88148
+runtime.goparkunlock(...)
+	/usr/local/go/src/runtime/proc.go:480
+runtime.updateMaxProcsGoroutine()
+	/usr/local/go/src/runtime/proc.go:7146 +0xf4 fp=0x4873e2eea7d0 sp=0x4873e2eea770 pc=0x63e84
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eea7d0 sp=0x4873e2eea7d0 pc=0x8df64
+created by runtime.defaultGOMAXPROCSUpdateEnable in goroutine 1
+	/usr/local/go/src/runtime/proc.go:7134 +0x48
+
+goroutine 6 gp=0x4873e2e99680 m=nil [finalizer wait]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eec580 sp=0x4873e2eec560 pc=0x88148
+runtime.runFinalizers()
+	/usr/local/go/src/runtime/mfinal.go:210 +0x100 fp=0x4873e2eec7d0 sp=0x4873e2eec580 pc=0x31ff0
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eec7d0 sp=0x4873e2eec7d0 pc=0x8df64
+created by runtime.createfing in goroutine 1
+	/usr/local/go/src/runtime/mfinal.go:172 +0x78
+
+goroutine 7 gp=0x4873e2e99860 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eecf00 sp=0x4873e2eecee0 pc=0x88148
+runtime.chanrecv(0x4873e2f220e0, 0x0, 0x1)
+	/usr/local/go/src/runtime/chan.go:667 +0x470 fp=0x4873e2eecf80 sp=0x4873e2eecf00 pc=0x220a0
+runtime.chanrecv1(0x0?, 0x0?)
+	/usr/local/go/src/runtime/chan.go:509 +0x14 fp=0x4873e2eecfb0 sp=0x4873e2eecf80 pc=0x21c24
+main.process(...)
+	/app/main.go:10
+main.main.gowrap1()
+	/app/main.go:70 +0x24 fp=0x4873e2eecfd0 sp=0x4873e2eecfb0 pc=0xdbf34
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eecfd0 sp=0x4873e2eecfd0 pc=0x8df64
+created by main.main in goroutine 1
+	/app/main.go:70 +0x150
+
+goroutine 8 gp=0x4873e2e99a40 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eed700 sp=0x4873e2eed6e0 pc=0x88148
+runtime.chanrecv(0x4873e2f220e0, 0x0, 0x1)
+	/usr/local/go/src/runtime/chan.go:667 +0x470 fp=0x4873e2eed780 sp=0x4873e2eed700 pc=0x220a0
+runtime.chanrecv1(0x0?, 0x0?)
+	/usr/local/go/src/runtime/chan.go:509 +0x14 fp=0x4873e2eed7b0 sp=0x4873e2eed780 pc=0x21c24
+main.process(...)
+	/app/main.go:10
+main.main.gowrap1()
+	/app/main.go:70 +0x24 fp=0x4873e2eed7d0 sp=0x4873e2eed7b0 pc=0xdbf34
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eed7d0 sp=0x4873e2eed7d0 pc=0x8df64
+created by main.main in goroutine 1
+	/app/main.go:70 +0x150
+
+goroutine 9 gp=0x4873e2e99c20 m=nil [chan receive]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/usr/local/go/src/runtime/proc.go:474 +0xb8 fp=0x4873e2eedf00 sp=0x4873e2eedee0 pc=0x88148
+runtime.chanrecv(0x4873e2f220e0, 0x0, 0x1)
+	/usr/local/go/src/runtime/chan.go:667 +0x470 fp=0x4873e2eedf80 sp=0x4873e2eedf00 pc=0x220a0
+runtime.chanrecv1(0x0?, 0x0?)
+	/usr/local/go/src/runtime/chan.go:509 +0x14 fp=0x4873e2eedfb0 sp=0x4873e2eedf80 pc=0x21c24
+main.process(...)
+	/app/main.go:10
+main.main.gowrap1()
+	/app/main.go:70 +0x24 fp=0x4873e2eedfd0 sp=0x4873e2eedfb0 pc=0xdbf34
+runtime.goexit({})
+	/usr/local/go/src/runtime/asm_arm64.s:1039 +0x4 fp=0x4873e2eedfd0 sp=0x4873e2eedfd0 pc=0x8df64
+created by main.main in goroutine 1
+	/app/main.go:70 +0x150
+
+r0      0xfffffffffffffffc
+r1      0xffffe2b94d88
+r2      0x80
+r3      0x36ee7f
+r4      0x0
+r5      0x0
+r6      0x0
+r7      0x0
+r8      0x16
+r9      0xcf7650f1cfa80
+r10     0xffffffffffffff
+r11     0x206ae10438
+r12     0x3
+r13     0x46
+r14     0x4873e2ea6020
+r15     0xb
+r16     0xffffe2b85c10
+r17     0xffffe2b94da0
+r18     0x0
+r19     0x90e8
+r20     0xffffe2b94d20
+r21     0x1ec0c0
+r22     0x4873e2e9a000
+r23     0x0
+r24     0x0
+r25     0x0
+r26     0x1d7970
+r27     0x1e0000
+r28     0x1eb8c0
+r29     0xffffe2b94ca8
+lr      0x1ca50
+sp      0xffffe2b94cb0
+pc      0x1cc20
+fault   0x0

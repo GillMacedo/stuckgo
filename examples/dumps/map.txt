@@ -1,0 +1,9 @@
+fatal error: concurrent map writes
+
+goroutine 23 [running]:
+internal/runtime/maps.fatal({0xe34e3?, 0x0?})
+	/usr/local/go/src/runtime/panic.go:1195 +0x20
+main.concurrent.func1()
+	/app/main.go:32 +0x30
+created by main.concurrent in goroutine 1
+	/app/main.go:30 +0x3c

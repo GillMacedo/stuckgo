@@ -1,0 +1,16 @@
+goroutine profile: total 637
+635 @ 0x92c18 0x23f14 0x23b28 0x288ff8 0x99ae4
+#	0x288ff7	main.lookupPrice.func1+0x47	/app/main.go:79
+
+1 @ 0x52d2c 0x919a4 0x27a0f4 0x279da0 0x277604 0x287bf0 0x287b4c 0x5cc80 0x99ae4
+#	0x27a0f3	runtime/pprof.writeRuntimeProfile+0xb3	/usr/local/go/src/runtime/pprof/pprof.go:848
+#	0x279d9f	runtime/pprof.writeGoroutine+0x4f	/usr/local/go/src/runtime/pprof/pprof.go:781
+#	0x277603	runtime/pprof.(*Profile).WriteTo+0x143	/usr/local/go/src/runtime/pprof/pprof.go:405
+#	0x287bef	main.write+0x7f				/app/main.go:60
+#	0x287b4b	main.main+0x44b				/app/main.go:51
+#	0x5cc7f		runtime.main+0x37f			/usr/local/go/src/runtime/proc.go:302
+
+1 @ 0x92c18 0x966d0 0x287ca4 0x99ae4
+#	0x966cf		time.Sleep+0x14f	/usr/local/go/src/runtime/time.go:368
+#	0x287ca3	main.leak+0x43		/app/main.go:69
+

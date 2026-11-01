@@ -1,0 +1,34 @@
+{
+  "name": "stuckgo",
+  "version": "0.1.0",
+  "description": "Find what a stuck or leaking Go program is waiting on from a goroutine dump. MCP server and CLI that only reads the dump text.",
+  "license": "MIT",
+  "author": "Giulliano Macedo (https://github.com/GillMacedo)",
+  "homepage": "https://github.com/GillMacedo/stuckgo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GillMacedo/stuckgo.git"
+  },
+  "mcpName": "io.github.GillMacedo/stuckgo",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "claude",
+    "go",
+    "golang",
+    "goroutine",
+    "goroutine-leak",
+    "goroutine-dump",
+    "pprof",
+    "deadlock",
+    "debugging",
+    "incident-response"
+  ],
+  "bin": {
+    "stuckgo": "npm/bin.js"
+  },
+  "files": [
+    "npm/bin.js",
+    "npm/bin"
+  ]
+}

@@ -1,0 +1,55 @@
+goroutine 1 [running]:
+runtime/pprof.writeGoroutineStacks({0x635df8, 0x126c8c106088})
+	/usr/local/go/src/runtime/pprof/pprof.go:816 +0x6c
+runtime/pprof.writeGoroutine({0x635df8?, 0x126c8c106088?}, 0x126c8c037ce8?)
+	/usr/local/go/src/runtime/pprof/pprof.go:779 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x2e1117?, {0x635df8?, 0x126c8c106088?}, 0x126c000001b6?)
+	/usr/local/go/src/runtime/pprof/pprof.go:405 +0x144
+main.write({0x126c8bfd2070?, 0xfffff3f52f20?}, 0x2)
+	/app/main.go:60 +0x80
+main.main()
+	/app/main.go:50 +0x428
+
+goroutine 20 [chan receive, 2 minutes]:
+main.netread()
+	/app/main.go:227 +0x128
+created by main.main in goroutine 1
+	/app/main.go:43 +0x3ac
+
+goroutine 21 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0xffff40e41000, 0x72)
+	/usr/local/go/src/runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x126c8c12c100?, 0xd01a0?, 0x0)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0x126c8c12c100)
+	/usr/local/go/src/internal/poll/fd_unix.go:618 +0x210
+net.(*netFD).accept(0x126c8c12c100)
+	/usr/local/go/src/net/fd_unix.go:149 +0x28
+net.(*TCPListener).accept(0x126c8c12e200)
+	/usr/local/go/src/net/tcpsock_posix.go:159 +0x24
+net.(*TCPListener).Accept(0x126c8c12e200)
+	/usr/local/go/src/net/tcpsock.go:387 +0x2c
+main.netread.func1()
+	/app/main.go:215 +0x38
+created by main.netread in goroutine 20
+	/app/main.go:213 +0x8c
+
+goroutine 22 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0xffff40e40e00, 0x72)
+	/usr/local/go/src/runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x126c8c12c200?, 0x126c8c116180?, 0x0)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x126c8c12c200, {0x126c8c116180, 0x10, 0x10})
+	/usr/local/go/src/internal/poll/fd_unix.go:170 +0x22c
+net.(*netFD).Read(0x126c8c12c200, {0x126c8c116180?, 0x126c8c021f88?, 0x2893d8?})
+	/usr/local/go/src/net/fd_posix.go:68 +0x28
+net.(*conn).Read(0x126c8c1060a8, {0x126c8c116180?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:196 +0x34
+main.readReply(...)
+	/app/main.go:232
+created by main.netread in goroutine 20
+	/app/main.go:226 +0x118

@@ -1,0 +1,13 @@
+fatal error: all goroutines are asleep - deadlock!
+
+goroutine 1 [chan receive]:
+main.deadlock()
+	/app/main.go:15 +0xa0
+main.main()
+	/app/main.go:62 +0xf4
+
+goroutine 7 [chan receive]:
+main.deadlock.func1()
+	/app/main.go:14 +0x2c
+created by main.deadlock in goroutine 1
+	/app/main.go:14 +0x90

@@ -1,0 +1,19 @@
+panic: assignment to entry in nil map
+
+goroutine 1 [running]:
+main.crash()
+	/app/main.go:24 +0xe4
+main.main()
+	/app/main.go:64 +0xc8
+
+goroutine 19 [chan receive]:
+main.process(...)
+	/app/main.go:10
+created by main.crash in goroutine 1
+	/app/main.go:20 +0x74
+
+goroutine 20 [chan receive]:
+main.process(...)
+	/app/main.go:10
+created by main.crash in goroutine 1
+	/app/main.go:21 +0xbc

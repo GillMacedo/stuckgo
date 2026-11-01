@@ -1,0 +1,575 @@
+goroutine 1 [running]:
+runtime/pprof.writeGoroutineStacks({0x635df8, 0x2a2859102008})
+	/usr/local/go/src/runtime/pprof/pprof.go:816 +0x6c
+runtime/pprof.writeGoroutine({0x635df8?, 0x2a2859102008?}, 0x2a2858f25ce8?)
+	/usr/local/go/src/runtime/pprof/pprof.go:779 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x2e1117?, {0x635df8?, 0x2a2859102008?}, 0x2a28000001b6?)
+	/usr/local/go/src/runtime/pprof/pprof.go:405 +0x144
+main.write({0x2a2858ec0070?, 0xfffffa234f20?}, 0x2)
+	/app/main.go:60 +0x80
+main.main()
+	/app/main.go:50 +0x428
+
+goroutine 7 [chan receive, 2 minutes]:
+main.sqlpool()
+	/app/main.go:182 +0xd8
+created by main.main in goroutine 1
+	/app/main.go:43 +0x3ac
+
+goroutine 8 [select, 2 minutes]:
+database/sql.(*DB).connectionOpener(0x2a2858f711e0, {0x638b40, 0x2a2858ee2050})
+	/usr/local/go/src/database/sql/sql.go:1266 +0x84
+created by database/sql.OpenDB in goroutine 7
+	/usr/local/go/src/database/sql/sql.go:846 +0x11c
+
+goroutine 9 [chan receive, 2 minutes]:
+main.stuckStmt.Query(...)
+	/app/main.go:168
+database/sql.ctxDriverStmtQuery({0x638ad0, 0x6b7940}, {0x638a98, 0x6b7940}, {0x6b7940, 0x0, 0x0?})
+	/usr/local/go/src/database/sql/ctxutil.go:94 +0x1a8
+database/sql.rowsiFromStatement({0x638ad0, 0x6b7940}, {0x6385b8, 0x6b7940}, 0x2a2858f46280, {0x0, 0x0, 0x0})
+	/usr/local/go/src/database/sql/sql.go:2853 +0xf4
+database/sql.(*DB).queryDC(0x10?, {0x638ad0, 0x6b7940}, {0x0, 0x0}, 0x2a2858ed2280, 0x2a2858ed8630, {0x2e0c35, 0x8}, {0x0, ...})
+	/usr/local/go/src/database/sql/sql.go:1821 +0x204
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1769 +0xbc
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858f27f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 10 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858f20f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 11 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858f21f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 12 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858f22f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 13 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858f23f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 14 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb0f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 15 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb1f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 16 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb2f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 18 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb3f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 19 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858facf00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 20 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fadf00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 21 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858faef00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 22 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858faff00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 23 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb8f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 24 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb9f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 25 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fbaf00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 26 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fbbf00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 27 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb4f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 28 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb5f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 29 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb6f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 30 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fb7f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 31 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fc0f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 32 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fc1f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 33 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fc2f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 34 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fc3f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 35 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fbcf00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 36 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fbdf00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 37 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fbef00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 38 [select, 2 minutes]:
+database/sql.(*DB).conn(0x2a2858f711e0, {0x638ad0, 0x6b7940}, 0x1)
+	/usr/local/go/src/database/sql/sql.go:1374 +0x440
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1764 +0x40
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858fbff00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70
+
+goroutine 39 [chan receive, 2 minutes]:
+main.stuckStmt.Query(...)
+	/app/main.go:168
+database/sql.ctxDriverStmtQuery({0x638ad0, 0x6b7940}, {0x638a98, 0x6b7940}, {0x6b7940, 0x0, 0x0?})
+	/usr/local/go/src/database/sql/ctxutil.go:94 +0x1a8
+database/sql.rowsiFromStatement({0x638ad0, 0x6b7940}, {0x6385b8, 0x6b7940}, 0x2a2858f46240, {0x0, 0x0, 0x0})
+	/usr/local/go/src/database/sql/sql.go:2853 +0xf4
+database/sql.(*DB).queryDC(0x10?, {0x638ad0, 0x6b7940}, {0x0, 0x0}, 0x2a2858ed2200, 0x2a2858ed8620, {0x2e0c35, 0x8}, {0x0, ...})
+	/usr/local/go/src/database/sql/sql.go:1821 +0x204
+database/sql.(*DB).query(0x2a2858f711e0, {0x638ad0, 0x6b7940}, {0x2e0c35, 0x8}, {0x0, 0x0, 0x0}, 0x0?)
+	/usr/local/go/src/database/sql/sql.go:1769 +0xbc
+database/sql.(*DB).QueryContext.func1(0x0?)
+	/usr/local/go/src/database/sql/sql.go:1747 +0x40
+database/sql.(*DB).retry(0x0?, 0x2a2858f26f00)
+	/usr/local/go/src/database/sql/sql.go:1581 +0x4c
+database/sql.(*DB).QueryContext(0x0?, {0x638ad0?, 0x6b7940?}, {0x2e0c35?, 0x0?}, {0x0?, 0x0?, 0x0?})
+	/usr/local/go/src/database/sql/sql.go:1746 +0x64
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1760
+main.loadCustomer(0x0?)
+	/app/main.go:186 +0x48
+created by main.sqlpool in goroutine 7
+	/app/main.go:180 +0x70

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "stuckgo": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "stuckgo@0.1.0",
+        "serve"
+      ]
+    }
+  }
+}

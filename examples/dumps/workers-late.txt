@@ -1,0 +1,65 @@
+goroutine 1 [running]:
+runtime/pprof.writeGoroutineStacks({0x635df8, 0x47f0bef96008})
+	/usr/local/go/src/runtime/pprof/pprof.go:816 +0x6c
+runtime/pprof.writeGoroutine({0x635df8?, 0x47f0bef96008?}, 0x47f0bee8dce8?)
+	/usr/local/go/src/runtime/pprof/pprof.go:779 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x2e1117?, {0x635df8?, 0x47f0bef96008?}, 0x47f0000001b6?)
+	/usr/local/go/src/runtime/pprof/pprof.go:405 +0x144
+main.write({0x47f0bee24070?, 0xffffd2592f20?}, 0x2)
+	/app/main.go:60 +0x80
+main.main()
+	/app/main.go:50 +0x428
+
+goroutine 7 [chan receive, 2 minutes]:
+main.workers()
+	/app/main.go:95 +0xa8
+created by main.main in goroutine 1
+	/app/main.go:43 +0x3ac
+
+goroutine 8 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c
+
+goroutine 9 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c
+
+goroutine 10 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c
+
+goroutine 11 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c
+
+goroutine 12 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c
+
+goroutine 13 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c
+
+goroutine 14 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c
+
+goroutine 15 [chan receive, 2 minutes]:
+main.worker(...)
+	/app/main.go:99
+created by main.workers in goroutine 7
+	/app/main.go:93 +0x3c

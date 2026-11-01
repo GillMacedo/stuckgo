@@ -1,0 +1,25 @@
+goroutine profile: total 43
+40 @ 0x92c18 0x6ff64 0x6ff45 0x940b8 0x9dd04 0x288024 0x287fcd 0x287fc9 0x99ae4
+#	0x940b7		internal/sync.runtime_SemacquireMutex+0x27	/usr/local/go/src/runtime/sema.go:95
+#	0x9dd03		internal/sync.(*Mutex).lockSlow+0x173		/usr/local/go/src/internal/sync/mutex.go:149
+#	0x288023	internal/sync.(*Mutex).Lock+0x83		/usr/local/go/src/internal/sync/mutex.go:70
+#	0x287fcc	sync.(*Mutex).Lock+0x2c				/usr/local/go/src/sync/mutex.go:46
+#	0x287fc8	main.(*store).Get+0x28				/app/main.go:109
+
+1 @ 0x52d2c 0x919a4 0x27a0f4 0x279da0 0x277604 0x287bf0 0x287b4c 0x5cc80 0x99ae4
+#	0x27a0f3	runtime/pprof.writeRuntimeProfile+0xb3	/usr/local/go/src/runtime/pprof/pprof.go:848
+#	0x279d9f	runtime/pprof.writeGoroutine+0x4f	/usr/local/go/src/runtime/pprof/pprof.go:781
+#	0x277603	runtime/pprof.(*Profile).WriteTo+0x143	/usr/local/go/src/runtime/pprof/pprof.go:405
+#	0x287bef	main.write+0x7f				/app/main.go:60
+#	0x287b4b	main.main+0x44b				/app/main.go:51
+#	0x5cc7f		runtime.main+0x37f			/usr/local/go/src/runtime/proc.go:302
+
+1 @ 0x92c18 0x24dd0 0x24924 0x288390 0x99ae4
+#	0x28838f	main.mutex+0x16f	/app/main.go:130
+
+1 @ 0x92c18 0x6f498 0x12f804 0x12f5f0 0xba408 0x288198 0x99ae4
+#	0x12f803	net.(*pipe).read+0xe3		/usr/local/go/src/net/pipe.go:159
+#	0x12f5ef	net.(*pipe).Read+0x1f		/usr/local/go/src/net/pipe.go:142
+#	0xba407		io.ReadAll+0xe7			/usr/local/go/src/io/io.go:722
+#	0x288197	main.(*store).Refresh+0xd7	/app/main.go:118
+

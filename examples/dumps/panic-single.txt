@@ -1,0 +1,7 @@
+panic: assignment to entry in nil map
+
+goroutine 1 [running]:
+main.crash()
+	/app/main.go:24 +0xe4
+main.main()
+	/app/main.go:64 +0xc8
