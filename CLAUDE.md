@@ -21,4 +21,4 @@ MCP server and CLI that finds what a stuck or leaking Go program is waiting on, 
 - Don't say a goroutine leaks from one dump unless Go's leak profile says so.
 
 ## Definition of done
-`make test` and `make lint` pass, and `CHANGELOG.md`, `ROADMAP.md` and docs are updated when relevant.
+`make test` and `make lint` pass, and `ROADMAP.md` and docs are updated when relevant.
